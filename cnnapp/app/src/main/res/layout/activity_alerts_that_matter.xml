@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AlertsThatMatter">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:text="@string/alerts_that_matter_to_you"
+            android:textColor="@color/black"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:text="@string/you_can_change_these_at_any_time_in_your_app_settingd"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/breaking_news"
+            android:textSize="16sp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/top_news_and_analysis"
+            android:textSize="16sp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/coronavirus"
+            android:textSize="16sp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/us_politics"
+            android:textSize="16sp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/business_and_tech"
+            android:textSize="16sp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/cnn_watch_now"
+            android:textSize="16sp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/sports"
+            android:textSize="16sp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="30dp"
+        android:background="@color/black"
+        android:text="@string/done"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="InvalidId" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

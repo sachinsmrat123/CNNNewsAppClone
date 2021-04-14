@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CNN_news_app">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activity.AlertsThatMatter"/>
+        <activity android:name=".Activity.SelectNewsFeed"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".Activity.SlaphScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -30,5 +30,254 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="ACCOUNT"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/toolBar" />
+
+            <TextView
+                android:clickable="true"
+                android:id="@+id/btLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:text="Log In"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/gray_line" />
+
+            <TextView
+                android:clickable="true"
+                android:id="@+id/btCreateAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:text="Create Account"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                tools:ignore="MissingConstraints" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+
+                android:background="@drawable/gray_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btCreateAccount" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="APP PREFERENCES"
+                app:layout_constraintStart_toStartOf="@id/guideline3"
+                app:layout_constraintTop_toBottomOf="@id/view2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:text="Edition"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="International" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:text="Android Notification Settings"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enable alerts in your system notification to allow alerts from CNN" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/gray_line" />
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Reader Mode"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/gray_line" />
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Enable 'This is CNN'"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:text="Font size"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Default" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/gray_line" />
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Autoplay videos over WI-FI'"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/gray_line" />
+
+            <Switch
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Play HD videos over WIFI'"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="GENERAL" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Send Feedback"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Privacy Policy"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Terms of Use"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Ad Choices"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Version 6.15.2" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
