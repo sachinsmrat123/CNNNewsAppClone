@@ -1,0 +1,2 @@
+com/example/cnn_news_app/BuildConfig.java
+ com.example.cnn_news_app.BuildConfig
