@@ -11,6 +11,7 @@ import com.example.cnn_news_app.ViewPagerAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_home.*
 
+
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
 
