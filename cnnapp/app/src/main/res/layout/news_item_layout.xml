@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_height="match_parent"
+    android:background="#F0FFF0">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="5dp"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/ivNews"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/sample_image" />
+            <ImageView
+                android:id="@+id/ivNewsBackground"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/image_black_backgroud" />
+
+            <TextView
+                android:id="@+id/tvNews"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/helvetica_bold"
+                android:text="Deaths outpace births in some Brazilian cities, as CoVid-19 resurges"
+                android:textColor="@color/white"
+                android:layout_margin="20dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/ivNews"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/tvNewsFooter"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@id/ivNews"
+                android:background="@color/white"/>
+
+            <ImageView
+                android:id="@+id/btnShareNews"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintTop_toTopOf="@id/tvNewsFooter"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="20sp"
+                android:src="@drawable/ic_share"
+                app:layout_constraintBottom_toBottomOf="@id/tvNewsFooter"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintTop_toTopOf="@id/tvNewsFooter"
+                app:layout_constraintEnd_toStartOf="@id/btnShareNews"
+                android:layout_marginEnd="20sp"
+                android:src="@drawable/ic_saved_outlined"
+                app:layout_constraintBottom_toBottomOf="@id/tvNewsFooter"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
