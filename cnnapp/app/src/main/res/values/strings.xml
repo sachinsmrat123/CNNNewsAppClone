@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">CNN_news_app</string>
+    <string name="please_select_yout_cnn_edition_to_customize_yout_newsfeed_and_alerts">Please select yout CNN edition to customize yout newsfeed and alerts:</string>
+    <string name="you_can_change_your_edition_anytime_from_your_setting_screen">You can change your edition anytime from your setting screen.</string>
+    <string name="breaking_news">Breaking News</string>
+    <string name="top_news_and_analysis">Top news and analysis</string>
+    <string name="you_can_change_these_at_any_time_in_your_app_settingd">You can change these at any time in your app settingd</string>
+    <string name="coronavirus">Coronavirus</string>
+    <string name="business_and_tech">Business and Tech</string>
+    <string name="us_politics">US Politics</string>
+    <string name="alerts_that_matter_to_you">Alerts that matter to you</string>
+    <string name="cnn_watch_now">CNN Watch Now</string>
+    <string name="sports">Sports</string>
+    <string name="done">Done</string>
+    <string name="next">NEXT</string>
+    <string name="get_all_the_news_most_relevant_to_you">Get all the news most relevant to you</string>
+    <string name="u_s_edition">U.S edition</string>
+    <string name="international">International</string>
+    <string name="todo">TODO</string>
 </resources>
