@@ -7,8 +7,10 @@ import android.net.NetworkCapabilities
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.example.cnn_news_app.model.Article
 import com.example.cnn_news_app.model.NewsResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Response
 import javax.inject.Inject
@@ -20,6 +22,7 @@ application: Application
 ):AndroidViewModel(application) {
 
 
+    /** Retrofit */
     var topNewsResponse:MutableLiveData<NetworkResult<NewsResponse>> = MutableLiveData()
     var breakingNewsResponse: NewsResponse? = null
 
@@ -86,6 +89,40 @@ application: Application
             capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
             capabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET) -> true
             else -> false
+        }
+    }
+
+
+    /** ROOM DATABASE */
+
+     fun saveArticle(article: Article){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.saveArticles(article)
+        }
+    }
+
+     fun getAllSavedArticles(){
+        repository.getAllArticles()
+    }
+     fun deleteArticle(article: Article){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.deleteArticle(article)
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+     fun deleteAllArticle(){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.deleteAllArticle()
         }
     }
 }

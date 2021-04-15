@@ -48,7 +48,6 @@
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabSelectedTextColor="@color/black"
         app:tabTextAppearance="@style/text_appearance_for_tab"
         app:layout_constraintTop_toBottomOf="@id/toolBar"
         app:tabMode="scrollable" />

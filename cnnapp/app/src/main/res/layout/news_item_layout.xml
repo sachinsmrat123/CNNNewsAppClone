@@ -6,8 +6,7 @@
     android:layout_marginStart="5dp"
     android:layout_marginEnd="5dp"
     android:layout_marginTop="5dp"
-    android:layout_height="match_parent"
-    android:background="#F0FFF0">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -21,32 +20,31 @@
             <ImageView
                 android:id="@+id/ivNews"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="250dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="centerCrop"
+                android:scaleType="center"
                 app:srcCompat="@drawable/sample_image" />
             <ImageView
                 android:id="@+id/ivNewsBackground"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="centerCrop"
+                android:layout_height="250dp"
+                app:layout_constraintEnd_toEndOf="@id/ivNews"
+                app:layout_constraintStart_toStartOf="@id/ivNews"
+                app:layout_constraintTop_toTopOf="@id/ivNews"
+                app:layout_constraintBottom_toBottomOf="@id/ivNews"
                 app:srcCompat="@drawable/image_black_backgroud" />
 
             <TextView
                 android:id="@+id/tvNews"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/helvetica_bold"
                 android:text="Deaths outpace births in some Brazilian cities, as CoVid-19 resurges"
                 android:textColor="@color/white"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/ivNews"
@@ -68,15 +66,18 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="20sp"
                 android:src="@drawable/ic_share"
+                android:clickable="true"
                 app:layout_constraintBottom_toBottomOf="@id/tvNewsFooter"/>
 
             <ImageView
                 android:layout_width="24dp"
+                android:id="@+id/btnSaveNews"
                 android:layout_height="24dp"
                 app:layout_constraintTop_toTopOf="@id/tvNewsFooter"
                 app:layout_constraintEnd_toStartOf="@id/btnShareNews"
                 android:layout_marginEnd="20sp"
-                android:src="@drawable/ic_saved_outlined"
+                android:clickable="true"
+                android:src="@drawable/ic_saved_outlined_black"
                 app:layout_constraintBottom_toBottomOf="@id/tvNewsFooter"/>
 
 
