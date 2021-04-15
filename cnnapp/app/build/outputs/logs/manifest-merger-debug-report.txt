@@ -1,0 +1,290 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\732545ee056286a4e8b0989ed0573f50\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment-ktx:1.2.4] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\87865d860fc8ad577f16da2cec348e30\jetified-fragment-ktx-1.2.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\92a6e25f678090660cdfd917318a33ce\navigation-ui-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\4ba8d3d6cf710aab45fa8c0069c0f621\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\092fede1078dbaea9d1db0202dad5e8e\navigation-common-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\a6827026aabdbe1949f31f25c4ddb50c\jetified-activity-ktx-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.3.2] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\85e6aa73e963d4a47a516ff79264c365\jetified-core-ktx-1.3.2\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.room:room-ktx:2.2.6] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\ab3f3fe18a380049b40a2b3f851242dd\jetified-room-ktx-2.2.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\c651a1e94ca476359eaef8096fe0e212\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\9ee6b31ad93e1d8eebd92f4389985106\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\1216f54441108c104a8b2b0ebe86063d\jetified-lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\5391e697f8a934935a9ed5bd93d37d44\navigation-ui-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\6210d59f56e5d55eb2b583fe1694b8f5\material-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\22c36692400214b88148f4c95701deb8\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\7bda3cb87723deb9f4894e05497b3e3b\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\009f250f2404d992b883922cae53635c\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.dagger:hilt-android:2.33-beta] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\32853f44e1d281699d191bac70143237\jetified-hilt-android-2.33-beta\AndroidManifest.xml:16:1-19:12
+MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\88801504acbc8a6ea41276c7fa6513a6\room-runtime-2.2.6\AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\11b320c9adc6f27912a7655c09374139\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\c28e66d007e53aaf8984acdb9950136a\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\e1a445df927b693369cc3c8390657af7\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\ea5dbf900f16999a004a6263db5208b1\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\fedd10a987f0753657e2986dd01aa4f2\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\fbafbd7f68cde9b47d46838c3d9923b4\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\6616d3a41e74cfbd002c18274df7b837\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\9f3eba17ef634f52cc174afb93b7b402\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\15cd06c7e324f914bf347a6fec4263c0\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\8ccb7d24a06761d1979fdf1e320510e8\navigation-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\14f7ad6caefbb449f478533092f9905c\fragment-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\3dea512bdabd739b6df1293c38ebc85c\navigation-runtime-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\3d4b6fbcca06bed2eeedd779ae8cd79b\jetified-activity-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\a673938b9edb982db63aad5d69b0ce6f\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\6004ad658bebca7672d9f68cf36f1c88\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\7260f421b7063cd9f1b4de00524d2de9\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\61e69b6e5f2e16e9a0ed8b99eb45388c\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\92a31568a6a6fb1f1408a546945dfba9\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\12ce41aee8e08e1cf26cff472a648281\transition-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\9641537ce7a44e1e83abc179c7c77600\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\926f10d0d40fecca0b3b60ee9c1789bb\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\5f29b07fa1c469e60108d1b12d2cd255\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\cb1073bce70557ce8c7096c8d4961844\navigation-common-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.3.2] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\3a9eafd20fcd4c0ea4950b44fed49c53\core-1.3.2\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\065d83fbb835692ba247e2e58496e3fb\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\4f6696b885aaf53ed09677afa16e4582\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\58d0fcba278ab13d029704a8654b18b8\jetified-lifecycle-viewmodel-savedstate-2.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\62b89724695aaa9ba31eccc77ab7b650\lifecycle-viewmodel-2.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\176ce6874b4fb9edbd423e0a9edc5d4f\jetified-savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\7acf0008815508c97017d56907d44620\sqlite-framework-2.0.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\b5efc1e1eb59e5bdacb2f8606dacd1d1\sqlite-2.0.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\d667511a1761ba910ce3b628a0244d72\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\5dfa2cd430a52e5cc434bd5ff069a4c3\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\4742cd4b5a1569c4647dd99b4ece3fec\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\6956289d8f53335ffd194c4487007a58\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\7242ec7a0b666f5985de7b2db0c7b70b\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\4dc7f3dcd9291614675aad72244b70cf\lifecycle-runtime-2.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\417989e081943f8b30823c90eca75cf0\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\efba57ffa12bce573dcb8393d529842f\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\ca39b0369a04ffb1d114419b7c39e02e\lifecycle-livedata-core-2.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\f52bb4bafee14f67d9dd2ed97d770698\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\33d54bdf15b67c19813671e5b740d0a4\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.33] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\9cd7b06526606f834f37c35875a35689\jetified-dagger-lint-aar-2.33\AndroidManifest.xml:16:1-19:12
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
+	package
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:3:5-39
+		INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
+		INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
+		INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:5:22-76
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:6:22-64
+application
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:7:5-25:19
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\6210d59f56e5d55eb2b583fe1694b8f5\material-1.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\6210d59f56e5d55eb2b583fe1694b8f5\material-1.3.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\22c36692400214b88148f4c95701deb8\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\22c36692400214b88148f4c95701deb8\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\88801504acbc8a6ea41276c7fa6513a6\room-runtime-2.2.6\AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\88801504acbc8a6ea41276c7fa6513a6\room-runtime-2.2.6\AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.core:core:1.3.2] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\3a9eafd20fcd4c0ea4950b44fed49c53\core-1.3.2\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.2] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\3a9eafd20fcd4c0ea4950b44fed49c53\core-1.3.2\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\d667511a1761ba910ce3b628a0244d72\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\d667511a1761ba910ce3b628a0244d72\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.3.2] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\3a9eafd20fcd4c0ea4950b44fed49c53\core-1.3.2\AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:11:9-41
+	android:roundIcon
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:12:9-54
+	android:icon
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:8:9-35
+	android:theme
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:14:9-50
+	android:name
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:9:9-38
+activity#com.example.cnn_news_app.Activity.AlertsThatMatter
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:15:9-62
+	android:name
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:15:19-60
+activity#com.example.cnn_news_app.Activity.SelectNewsFeed
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:16:9-60
+	android:name
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:16:19-58
+activity#com.example.cnn_news_app.MainActivity
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:17:9-49
+	android:name
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:17:19-47
+activity#com.example.cnn_news_app.Activity.SlaphScreen
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:18:9-24:20
+	android:name
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:18:19-55
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:19:13-23:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:22:27-74
+uses-sdk
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\732545ee056286a4e8b0989ed0573f50\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\732545ee056286a4e8b0989ed0573f50\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.2.4] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\87865d860fc8ad577f16da2cec348e30\jetified-fragment-ktx-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.2.4] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\87865d860fc8ad577f16da2cec348e30\jetified-fragment-ktx-1.2.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\92a6e25f678090660cdfd917318a33ce\navigation-ui-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\92a6e25f678090660cdfd917318a33ce\navigation-ui-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\4ba8d3d6cf710aab45fa8c0069c0f621\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\4ba8d3d6cf710aab45fa8c0069c0f621\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\092fede1078dbaea9d1db0202dad5e8e\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\092fede1078dbaea9d1db0202dad5e8e\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\a6827026aabdbe1949f31f25c4ddb50c\jetified-activity-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\a6827026aabdbe1949f31f25c4ddb50c\jetified-activity-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.3.2] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\85e6aa73e963d4a47a516ff79264c365\jetified-core-ktx-1.3.2\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.3.2] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\85e6aa73e963d4a47a516ff79264c365\jetified-core-ktx-1.3.2\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.room:room-ktx:2.2.6] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\ab3f3fe18a380049b40a2b3f851242dd\jetified-room-ktx-2.2.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-ktx:2.2.6] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\ab3f3fe18a380049b40a2b3f851242dd\jetified-room-ktx-2.2.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\c651a1e94ca476359eaef8096fe0e212\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\c651a1e94ca476359eaef8096fe0e212\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\9ee6b31ad93e1d8eebd92f4389985106\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\9ee6b31ad93e1d8eebd92f4389985106\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\1216f54441108c104a8b2b0ebe86063d\jetified-lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\1216f54441108c104a8b2b0ebe86063d\jetified-lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\5391e697f8a934935a9ed5bd93d37d44\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\5391e697f8a934935a9ed5bd93d37d44\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\6210d59f56e5d55eb2b583fe1694b8f5\material-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\6210d59f56e5d55eb2b583fe1694b8f5\material-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\22c36692400214b88148f4c95701deb8\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\22c36692400214b88148f4c95701deb8\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\7bda3cb87723deb9f4894e05497b3e3b\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\7bda3cb87723deb9f4894e05497b3e3b\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\009f250f2404d992b883922cae53635c\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\009f250f2404d992b883922cae53635c\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:hilt-android:2.33-beta] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\32853f44e1d281699d191bac70143237\jetified-hilt-android-2.33-beta\AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.33-beta] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\32853f44e1d281699d191bac70143237\jetified-hilt-android-2.33-beta\AndroidManifest.xml:18:3-42
+MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\88801504acbc8a6ea41276c7fa6513a6\room-runtime-2.2.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\88801504acbc8a6ea41276c7fa6513a6\room-runtime-2.2.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\11b320c9adc6f27912a7655c09374139\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\11b320c9adc6f27912a7655c09374139\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\c28e66d007e53aaf8984acdb9950136a\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\c28e66d007e53aaf8984acdb9950136a\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\e1a445df927b693369cc3c8390657af7\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\e1a445df927b693369cc3c8390657af7\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\ea5dbf900f16999a004a6263db5208b1\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\ea5dbf900f16999a004a6263db5208b1\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\fedd10a987f0753657e2986dd01aa4f2\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\fedd10a987f0753657e2986dd01aa4f2\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\fbafbd7f68cde9b47d46838c3d9923b4\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\fbafbd7f68cde9b47d46838c3d9923b4\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\6616d3a41e74cfbd002c18274df7b837\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\6616d3a41e74cfbd002c18274df7b837\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\9f3eba17ef634f52cc174afb93b7b402\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\9f3eba17ef634f52cc174afb93b7b402\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\15cd06c7e324f914bf347a6fec4263c0\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\15cd06c7e324f914bf347a6fec4263c0\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\8ccb7d24a06761d1979fdf1e320510e8\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\8ccb7d24a06761d1979fdf1e320510e8\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\14f7ad6caefbb449f478533092f9905c\fragment-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\14f7ad6caefbb449f478533092f9905c\fragment-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\3dea512bdabd739b6df1293c38ebc85c\navigation-runtime-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\3dea512bdabd739b6df1293c38ebc85c\navigation-runtime-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\3d4b6fbcca06bed2eeedd779ae8cd79b\jetified-activity-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\3d4b6fbcca06bed2eeedd779ae8cd79b\jetified-activity-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\a673938b9edb982db63aad5d69b0ce6f\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\a673938b9edb982db63aad5d69b0ce6f\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\6004ad658bebca7672d9f68cf36f1c88\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\6004ad658bebca7672d9f68cf36f1c88\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\7260f421b7063cd9f1b4de00524d2de9\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\7260f421b7063cd9f1b4de00524d2de9\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\61e69b6e5f2e16e9a0ed8b99eb45388c\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\61e69b6e5f2e16e9a0ed8b99eb45388c\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\92a31568a6a6fb1f1408a546945dfba9\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\92a31568a6a6fb1f1408a546945dfba9\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\12ce41aee8e08e1cf26cff472a648281\transition-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\12ce41aee8e08e1cf26cff472a648281\transition-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\9641537ce7a44e1e83abc179c7c77600\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\9641537ce7a44e1e83abc179c7c77600\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\926f10d0d40fecca0b3b60ee9c1789bb\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\926f10d0d40fecca0b3b60ee9c1789bb\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\5f29b07fa1c469e60108d1b12d2cd255\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\5f29b07fa1c469e60108d1b12d2cd255\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\cb1073bce70557ce8c7096c8d4961844\navigation-common-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\cb1073bce70557ce8c7096c8d4961844\navigation-common-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.2] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\3a9eafd20fcd4c0ea4950b44fed49c53\core-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.2] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\3a9eafd20fcd4c0ea4950b44fed49c53\core-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\065d83fbb835692ba247e2e58496e3fb\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\065d83fbb835692ba247e2e58496e3fb\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\4f6696b885aaf53ed09677afa16e4582\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\4f6696b885aaf53ed09677afa16e4582\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\58d0fcba278ab13d029704a8654b18b8\jetified-lifecycle-viewmodel-savedstate-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\58d0fcba278ab13d029704a8654b18b8\jetified-lifecycle-viewmodel-savedstate-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\62b89724695aaa9ba31eccc77ab7b650\lifecycle-viewmodel-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\62b89724695aaa9ba31eccc77ab7b650\lifecycle-viewmodel-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\176ce6874b4fb9edbd423e0a9edc5d4f\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\176ce6874b4fb9edbd423e0a9edc5d4f\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\7acf0008815508c97017d56907d44620\sqlite-framework-2.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\7acf0008815508c97017d56907d44620\sqlite-framework-2.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\b5efc1e1eb59e5bdacb2f8606dacd1d1\sqlite-2.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\b5efc1e1eb59e5bdacb2f8606dacd1d1\sqlite-2.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\d667511a1761ba910ce3b628a0244d72\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\d667511a1761ba910ce3b628a0244d72\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\5dfa2cd430a52e5cc434bd5ff069a4c3\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\5dfa2cd430a52e5cc434bd5ff069a4c3\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\4742cd4b5a1569c4647dd99b4ece3fec\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\4742cd4b5a1569c4647dd99b4ece3fec\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\6956289d8f53335ffd194c4487007a58\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\6956289d8f53335ffd194c4487007a58\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\7242ec7a0b666f5985de7b2db0c7b70b\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\7242ec7a0b666f5985de7b2db0c7b70b\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\4dc7f3dcd9291614675aad72244b70cf\lifecycle-runtime-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\4dc7f3dcd9291614675aad72244b70cf\lifecycle-runtime-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\417989e081943f8b30823c90eca75cf0\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\417989e081943f8b30823c90eca75cf0\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\efba57ffa12bce573dcb8393d529842f\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\efba57ffa12bce573dcb8393d529842f\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\ca39b0369a04ffb1d114419b7c39e02e\lifecycle-livedata-core-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\ca39b0369a04ffb1d114419b7c39e02e\lifecycle-livedata-core-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\f52bb4bafee14f67d9dd2ed97d770698\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\f52bb4bafee14f67d9dd2ed97d770698\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\33d54bdf15b67c19813671e5b740d0a4\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\33d54bdf15b67c19813671e5b740d0a4\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.dagger:dagger-lint-aar:2.33] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\9cd7b06526606f834f37c35875a35689\jetified-dagger-lint-aar-2.33\AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.33] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\9cd7b06526606f834f37c35875a35689\jetified-dagger-lint-aar-2.33\AndroidManifest.xml:18:3-42
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.2.6] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\88801504acbc8a6ea41276c7fa6513a6\room-runtime-2.2.6\AndroidManifest.xml:25:9-28:40
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.2.6] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\88801504acbc8a6ea41276c7fa6513a6\room-runtime-2.2.6\AndroidManifest.xml:28:13-37
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.2.6] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\88801504acbc8a6ea41276c7fa6513a6\room-runtime-2.2.6\AndroidManifest.xml:27:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.2.6] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\88801504acbc8a6ea41276c7fa6513a6\room-runtime-2.2.6\AndroidManifest.xml:26:13-74

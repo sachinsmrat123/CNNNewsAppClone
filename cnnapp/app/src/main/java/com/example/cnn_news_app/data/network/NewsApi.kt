@@ -1,6 +1,7 @@
 package com.example.cnn_news_app.data.network
 
 
+import com.example.cnn_news_app.model.Article
 import com.example.cnn_news_app.model.NewsResponse
 import retrofit2.Call
 import retrofit2.Response
@@ -16,7 +17,7 @@ interface NewsApi {
         countryCode:String = "cnn",
         @Query("apiKey")
         apiKey:String = "8b88078f00054b9cbeb4786b4d368590"
-    ):Response<NewsResponse>
+    ):List<Article>
 
 
 }
