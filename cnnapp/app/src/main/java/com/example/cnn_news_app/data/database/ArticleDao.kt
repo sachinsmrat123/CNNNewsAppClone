@@ -11,12 +11,12 @@ interface ArticleDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(article: Article):Long
 
-    @Query("SELECT * FROM articles")
+    @Query("SELECT * FROM articlesTable ORDER BY id ASC")
     fun getAllArticles():LiveData<List<Article>>
 
     @Delete
     suspend fun deleteArticle(article: Article)
 
-    @Query("DELETE FROM articles")
+    @Query("DELETE FROM articlesTable")
     fun deleteAllArticles()
 }
