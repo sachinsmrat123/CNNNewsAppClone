@@ -9,6 +9,7 @@ import com.google.gson.annotations.SerializedName
 data class Article(
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null,
+    var saved:Int = 0,
     @SerializedName("author")
     val author: String?,
     @SerializedName("content")
@@ -25,4 +26,6 @@ data class Article(
     val url: String?,
     @SerializedName("urlToImage")
     val urlToImage: String?
-)
+){
+
+}

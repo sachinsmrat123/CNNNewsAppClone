@@ -4,42 +4,54 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.TextView
 import com.example.cnn_news_app.R
-import kotlinx.android.synthetic.main.activity_select_news_feed.*
+import com.example.cnn_news_app.databinding.ActivitySelectNewsFeedBinding
 
 class SelectNewsFeed : AppCompatActivity() {
+
+
+
+     private var binding: ActivitySelectNewsFeedBinding? = null
     @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select_news_feed)
         var button1 = 1;
         var button2=1;
+        val mLlUsEdition: LinearLayout = findViewById(R.id.llUsEdition)
+        val mLlInternational: LinearLayout = findViewById(R.id.llInternational)
+        val mTvUsEdition: TextView = findViewById(R.id.tvUsEdition)
+        val mTvInternational: TextView = findViewById(R.id.tvInternational)
+        val mBtNext: Button = findViewById(R.id.btNext)
 
-        llUsEdition.setOnClickListener {
+        mLlUsEdition.setOnClickListener {
             if(button1==1){
-                tvUsEdition.setTextColor(R.color.red)
-                llUsEdition.setBackgroundResource(R.drawable.orangle_background)
+                mTvUsEdition.setTextColor(R.color.red)
+                mLlUsEdition.setBackgroundResource(R.drawable.orangle_background)
                 button1=2
             }else if(button1==2){
-                tvUsEdition.setTextColor(R.color.black)
-                llUsEdition.setBackgroundResource(R.drawable.gray_background_round)
+                mTvUsEdition.setTextColor(R.color.black)
+                mLlUsEdition.setBackgroundResource(R.drawable.gray_background_round)
                 button1=1
             }
         }
 
-        llInternational.setOnClickListener {
+        mLlInternational.setOnClickListener {
             if(button2==1){
-                tvInternational.setTextColor(R.color.red)
-                llInternational.setBackgroundResource(R.drawable.orangle_background)
+                mTvInternational.setTextColor(R.color.red)
+                mLlInternational.setBackgroundResource(R.drawable.orangle_background)
                 button2=2;
             }else if(button2==2){
-                tvInternational.setTextColor(R.color.black)
-                llInternational.setBackgroundResource(R.drawable.gray_background_round)
+                mTvInternational.setTextColor(R.color.black)
+                mLlInternational.setBackgroundResource(R.drawable.gray_background_round)
                 button2=1;
             }
         }
 
-        btNext.setOnClickListener {
+        mBtNext.setOnClickListener {
            intent=Intent(this, AlertsThatMatter::class.java)
             startActivity(intent)
         }

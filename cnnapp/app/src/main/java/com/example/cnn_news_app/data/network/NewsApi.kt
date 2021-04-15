@@ -13,7 +13,7 @@ interface NewsApi {
     @GET("v2/top-headlines")
     suspend fun getTopNews(
         @Query("sources")
-        countryCode:String = "cnn",
+        countryCode:String = "techcrunch",
         @Query("apiKey")
         apiKey:String = "8b88078f00054b9cbeb4786b4d368590"
     ):Response<NewsResponse>
