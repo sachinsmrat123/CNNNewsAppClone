@@ -6,7 +6,7 @@ import com.example.cnn_news_app.model.Article
 import com.example.cnn_news_app.model.NewsResponse
 
 
-//@Entity(tableName = "World_News_Table_cache")
+@Entity(tableName = "World_News_Table_cache")
 class WorldNewsEntity(
     var newsResponse: NewsResponse
 ) {
