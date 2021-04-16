@@ -4,7 +4,7 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.example.cnn_news_app.data.database.cache.entity.*
-import com.example.cnn_news_app.model.Article
+import com.example.cnn_news_app.data.model.Article
 
 
 @Database(

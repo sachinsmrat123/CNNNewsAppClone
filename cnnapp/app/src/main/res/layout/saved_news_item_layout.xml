@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="1dp"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/savedCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageSaved"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/sample_image"/>
+
+            <TextView
+                android:id="@+id/savedHading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/helvetica_light_"
+                android:text="what civilian in Afghanistan say about Americas's withdrawal"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toTopOf="@id/btnDeleteSavedNews"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imageSaved"
+                app:layout_constraintTop_toTopOf="@id/imageSaved" />
+
+            <ImageView
+                android:id="@+id/btnShareSavedNews"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_margin="8dp"
+                android:layout_marginEnd="20sp"
+                android:src="@drawable/ic_share"
+                android:clickable="true"
+                />
+
+            <ImageView
+                android:id="@+id/btnDeleteSavedNews"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintEnd_toStartOf="@id/btnShareSavedNews"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:clickable="true"
+                android:src="@drawable/ic_delete_24"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

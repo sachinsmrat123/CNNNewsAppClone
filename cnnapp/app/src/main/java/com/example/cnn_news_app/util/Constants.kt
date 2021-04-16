@@ -4,6 +4,6 @@ class Constants {
 
     companion object{
 
-        const val API_KEY = "48594a7cff5341469f3f0faedcbf115b"
+        const val API_KEY = "a7848004dcf640f3b358cf42ec2234e6"
     }
 }

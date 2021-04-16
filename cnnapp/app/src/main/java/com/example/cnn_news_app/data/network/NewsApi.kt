@@ -1,7 +1,7 @@
 package com.example.cnn_news_app.data.network
 
 
-import com.example.cnn_news_app.model.NewsResponse
+import com.example.cnn_news_app.data.model.NewsResponse
 import com.example.cnn_news_app.util.Constants.Companion.API_KEY
 import retrofit2.Response
 import retrofit2.http.GET
