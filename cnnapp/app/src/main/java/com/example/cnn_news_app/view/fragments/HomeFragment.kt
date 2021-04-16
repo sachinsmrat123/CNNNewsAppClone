@@ -1,5 +1,6 @@
 package com.example.cnn_news_app.view.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import com.example.cnn_news_app.R
 import com.example.cnn_news_app.ViewPagerAdapter
 import com.example.cnn_news_app.databinding.FragmentHomeBinding
+import com.example.cnn_news_app.liveTv.liveTvActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -30,6 +32,10 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewPager.adapter = ViewPagerAdapter(requireActivity().supportFragmentManager)
         tabLayout.setupWithViewPager(viewPager)
+        tvWatchTv.setOnClickListener {
+            val intent = Intent (activity, liveTvActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 
