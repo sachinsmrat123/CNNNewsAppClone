@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.profileFragment
             )
         )
-
         bottomNavigationView.setupWithNavController(navController)
         setSupportActionBar(toolBar)
         setupActionBarWithNavController(navController,appBarConfiguration)

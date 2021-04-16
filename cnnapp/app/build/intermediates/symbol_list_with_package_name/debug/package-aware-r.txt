@@ -1703,7 +1703,9 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_saved_filled
+drawable ic_saved_filled_red
 drawable ic_saved_outlined
+drawable ic_saved_outlined_black
 drawable ic_search
 drawable ic_share
 drawable image_black_backgroud
@@ -1808,6 +1810,7 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_global_homeFragment
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -1842,6 +1845,7 @@ id btCreateAccount
 id btDone
 id btLogin
 id btNext
+id btnSaveNews
 id btnShareNews
 id buttonPanel
 id cache_measures
@@ -1929,6 +1933,7 @@ id forever
 id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -2180,6 +2185,7 @@ id title_template
 id toggle
 id toolBar
 id top
+id topNewsProgressBar
 id topPanel
 id touch_outside
 id transitionToEnd

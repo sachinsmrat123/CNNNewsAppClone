@@ -11,13 +11,12 @@ import retrofit2.http.Query
 interface NewsApi {
 
 
-    @GET("v2/top-headlines")
+    @GET("/api/TopNews")
     suspend fun getTopNews(
-        @Query("sources")
-        countryCode:String = "techcrunch",
-        @Query("apiKey")
-        apiKey:String = "8b88078f00054b9cbeb4786b4d368590"
-    ):List<Article>
-
+//        @Query("sources")
+//        countryCode:String = "cnn",
+//        @Query("apiKey")
+//        apiKey:String = "bb7380db2f8c4145ad67b3c8e96716df"
+    ):Response<NewsResponse>
 
 }

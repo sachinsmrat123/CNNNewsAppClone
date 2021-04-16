@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         app:labelVisibilityMode="unlabeled"
         app:itemIconSize="@dimen/bottom_navigation_icon_size"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

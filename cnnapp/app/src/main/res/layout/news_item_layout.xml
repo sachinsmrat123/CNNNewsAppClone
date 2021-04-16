@@ -45,7 +45,7 @@
                 android:text="Deaths outpace births in some Brazilian cities, as CoVid-19 resurges"
                 android:textColor="@color/white"
                 android:layout_margin="10dp"
-                android:textSize="24sp"
+                android:textSize="21sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@id/ivNews"
                 app:layout_constraintEnd_toEndOf="parent"

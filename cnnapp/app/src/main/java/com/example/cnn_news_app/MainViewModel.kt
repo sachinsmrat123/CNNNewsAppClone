@@ -110,16 +110,6 @@ application: Application
         }
     }
 
-
-
-
-
-
-
-
-
-
-
      fun deleteAllArticle(){
         viewModelScope.launch(Dispatchers.IO){
             repository.deleteAllArticle()

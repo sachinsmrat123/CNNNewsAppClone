@@ -34,11 +34,10 @@ class NewsAdapter(private val listener: ItemClickListener):RecyclerView.Adapter<
         holder.mBtnSaveNews.setOnClickListener {
             if (articles[position].saved==0){
                 holder.mBtnSaveNews.setImageResource(R.drawable.ic_saved_filled_red)
-                listener.onArticleClicked(articles[position])
+                listener.onSavedButtonClicked(articles[position])
             }else{
                 holder.mBtnSaveNews.setImageResource(R.drawable.ic_saved_outlined_black)
-                listener.onArticleClicked(articles[position])
-                articles[position].saved=0
+                listener.onSavedButtonClicked(articles[position])
             }
         }
 

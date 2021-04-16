@@ -9,7 +9,7 @@ import com.example.cnn_news_app.model.Article
 interface ArticleDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(article: Article):Long
+    suspend fun insert(article: Article)
 
     @Query("SELECT * FROM articlesTable ORDER BY id ASC")
     fun getAllArticles():LiveData<List<Article>>

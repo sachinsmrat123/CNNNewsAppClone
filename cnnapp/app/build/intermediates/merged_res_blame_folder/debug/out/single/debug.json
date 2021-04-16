@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_profile.xml.flat",
-        "source": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\src\\main\\res\\layout\\fragment_profile.xml"
-    },
-    {
         "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\font_helvetica_bold.ttf.flat",
         "source": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\src\\main\\res\\font\\helvetica_bold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\src\\main\\res\\layout\\fragment_profile.xml"
     },
     {
         "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cnn_splach_screen.png.flat",
@@ -40,12 +40,12 @@
         "source": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_select_news_feed.xml.flat",
         "source": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\src\\main\\res\\layout\\activity_select_news_feed.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_usamap.png.flat",
@@ -88,12 +88,12 @@
         "source": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_us_politics.xml.flat",
-        "source": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\src\\main\\res\\layout\\fragment_us_politics.xml"
-    },
-    {
         "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_us_politics.xml.flat",
+        "source": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\src\\main\\res\\layout\\fragment_us_politics.xml"
     },
     {
         "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_entertainment.xml.flat",
@@ -130,6 +130,10 @@
     {
         "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_selector_for_saved_bottom_nav.xml.flat",
         "source": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\src\\main\\res\\drawable-v24\\selector_for_saved_bottom_nav.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_saved_filled_red.xml.flat",
+        "source": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\src\\main\\res\\drawable-v24\\ic_saved_filled_red.xml"
     },
     {
         "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
@@ -178,6 +182,10 @@
     {
         "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_alerts_that_matter.xml.flat",
         "source": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\src\\main\\res\\layout\\activity_alerts_that_matter.xml"
+    },
+    {
+        "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_saved_outlined_black.xml.flat",
+        "source": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\src\\main\\res\\drawable-v24\\ic_saved_outlined_black.xml"
     },
     {
         "merged": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\res\\merged\\debug\\drawable_image_black_backgroud.xml.flat",

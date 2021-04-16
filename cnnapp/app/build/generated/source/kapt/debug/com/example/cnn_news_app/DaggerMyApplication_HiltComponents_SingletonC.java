@@ -8,8 +8,12 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
+import com.example.cnn_news_app.data.database.ArticleDao;
+import com.example.cnn_news_app.data.database.NewsDatabase;
 import com.example.cnn_news_app.data.network.NewsApi;
 import com.example.cnn_news_app.di.DatabaseModule;
+import com.example.cnn_news_app.di.DatabaseModule_ProvideDaoFactory;
+import com.example.cnn_news_app.di.DatabaseModule_ProvideDatabaseFactory;
 import com.example.cnn_news_app.di.NetworkModule;
 import com.example.cnn_news_app.di.NetworkModule_ProvideApiServiceFactory;
 import com.example.cnn_news_app.di.NetworkModule_ProvideConverterFactoryFactory;
@@ -30,6 +34,7 @@ import dagger.hilt.android.internal.lifecycle.DefaultViewModelFactories_Internal
 import dagger.hilt.android.internal.managers.ActivityRetainedComponentManager_Lifecycle_Factory;
 import dagger.hilt.android.internal.modules.ApplicationContextModule;
 import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideApplicationFactory;
+import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideContextFactory;
 import dagger.internal.DoubleCheck;
 import dagger.internal.MemoizedSentinel;
 import dagger.internal.Preconditions;
@@ -55,6 +60,10 @@ public final class DaggerMyApplication_HiltComponents_SingletonC extends MyAppli
   private volatile Object retrofit = new MemoizedSentinel();
 
   private volatile Object newsApi = new MemoizedSentinel();
+
+  private volatile Object newsDatabase = new MemoizedSentinel();
+
+  private volatile Object articleDao = new MemoizedSentinel();
 
   private DaggerMyApplication_HiltComponents_SingletonC(
       ApplicationContextModule applicationContextModuleParam) {
@@ -119,6 +128,34 @@ public final class DaggerMyApplication_HiltComponents_SingletonC extends MyAppli
       }
     }
     return (NewsApi) local;
+  }
+
+  private NewsDatabase newsDatabase() {
+    Object local = newsDatabase;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = newsDatabase;
+        if (local instanceof MemoizedSentinel) {
+          local = DatabaseModule_ProvideDatabaseFactory.provideDatabase(ApplicationContextModule_ProvideContextFactory.provideContext(applicationContextModule));
+          newsDatabase = DoubleCheck.reentrantCheck(newsDatabase, local);
+        }
+      }
+    }
+    return (NewsDatabase) local;
+  }
+
+  private ArticleDao articleDao() {
+    Object local = articleDao;
+    if (local instanceof MemoizedSentinel) {
+      synchronized (local) {
+        local = articleDao;
+        if (local instanceof MemoizedSentinel) {
+          local = DatabaseModule_ProvideDaoFactory.provideDao(newsDatabase());
+          articleDao = DoubleCheck.reentrantCheck(articleDao, local);
+        }
+      }
+    }
+    return (ArticleDao) local;
   }
 
   @Override
@@ -206,7 +243,7 @@ public final class DaggerMyApplication_HiltComponents_SingletonC extends MyAppli
         synchronized (local) {
           local = newsRepository;
           if (local instanceof MemoizedSentinel) {
-            local = new NewsRepository(DaggerMyApplication_HiltComponents_SingletonC.this.newsApi());
+            local = new NewsRepository(DaggerMyApplication_HiltComponents_SingletonC.this.newsApi(), DaggerMyApplication_HiltComponents_SingletonC.this.articleDao());
             newsRepository = DoubleCheck.reentrantCheck(newsRepository, local);
           }
         }

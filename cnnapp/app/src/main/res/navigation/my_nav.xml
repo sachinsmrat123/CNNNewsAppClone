@@ -24,5 +24,5 @@
         android:id="@+id/profileFragment"
         android:name="com.example.cnn_news_app.view.fragments.ProfileFragment"
         android:label="Preferences"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" /><action android:id="@+id/action_global_homeFragment" app:destination="@id/homeFragment"/>
 </navigation>

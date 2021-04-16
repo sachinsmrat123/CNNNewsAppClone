@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.cnn_news_app.R
 import com.example.cnn_news_app.ViewPagerAdapter
-import com.example.cnn_news_app.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -22,7 +21,6 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
          return inflater.inflate(R.layout.fragment_home, container, false)
     }
 

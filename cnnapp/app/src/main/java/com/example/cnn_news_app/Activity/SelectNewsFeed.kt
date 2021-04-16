@@ -8,13 +8,10 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.cnn_news_app.R
-import com.example.cnn_news_app.databinding.ActivitySelectNewsFeedBinding
+
 
 class SelectNewsFeed : AppCompatActivity() {
 
-
-
-     private var binding: ActivitySelectNewsFeedBinding? = null
     @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
