@@ -19,15 +19,15 @@ import kotlinx.android.synthetic.main.fragment_world.*
 import kotlinx.coroutines.launch
 
 
-class WorldFragment : Fragment(),ItemClickListener {
+class WorldFragment : Fragment(), ItemClickListener {
     var count = 0
     private lateinit var mainViewModel: MainViewModel
     private lateinit var mWorldNewsAdapter: NewsAdapter
     private var articles = listOf<Article>()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_world, container, false)
@@ -37,56 +37,60 @@ class WorldFragment : Fragment(),ItemClickListener {
         super.onCreate(savedInstanceState)
 
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
-        mWorldNewsAdapter = NewsAdapter(articles,this);
+        mWorldNewsAdapter = NewsAdapter(articles, this);
 
         rvWorld.adapter = mWorldNewsAdapter
         rvWorld.layoutManager = LinearLayoutManager(requireContext())
 //        showProgressBar()
-//        requestApiData()
+        requestApiData()
 
-        lifecycleScope.launchWhenStarted {
-            readDatabase()
-        }
+//        lifecycleScope.launchWhenStarted {
+//            readDatabase()
+//        }
     }
-    private fun readDatabase(){
+
+    private fun readDatabase() {
         lifecycleScope.launch {
 
-            mainViewModel.getCacheTopNews.observeOnce(viewLifecycleOwner, Observer { database->
-                if (database.isNotEmpty()){
+            mainViewModel.getCacheWorldNews.observeOnce(viewLifecycleOwner, Observer { database ->
+                if (database.isNotEmpty()) {
                     Log.d("TopNewsFragment", "readDatabase called!")
                     mWorldNewsAdapter.setData(database[0].newsResponse.articles)
                     hideProgressBar()
-                }else{
-                    requestApiData()
-
                 }
 
             })
         }
     }
+
     private fun loadDataFromCache() {
         lifecycleScope.launch {
-            mainViewModel.getCacheTopNews.observe(viewLifecycleOwner, Observer { cachedata->
-                if (cachedata.isNotEmpty()){
-                    mWorldNewsAdapter.setData(cachedata[0].newsResponse.articles)
-                }else{
-                    showProgressBar()
-                }
-            })
+            if (view != null) {
+                mainViewModel.getCacheWorldNews.observe(viewLifecycleOwner, Observer { cachedata ->
+                    if (cachedata.isNotEmpty()) {
+                        mWorldNewsAdapter.setData(cachedata[0].newsResponse.articles)
+                    } else {
+                        showProgressBar()
+                    }
+                })
+            }
+
         }
     }
+
     private fun requestApiData() {
 
-        mainViewModel.getTopNews()
-        mainViewModel.topNewsResponse.observe(requireActivity(), Observer {
+        mainViewModel.getWorldNews()
+        mainViewModel.worldNewsResponse.observe(requireActivity(), Observer {
 
 
             Log.d("response", "onViewCreated: $it ")
-            when(it){
-                is NetworkResult.Success ->{
+            when (it) {
+                is NetworkResult.Success -> {
 
                     hideProgressBar()
                     articles = it.data!!.articles
@@ -97,13 +101,13 @@ class WorldFragment : Fragment(),ItemClickListener {
                     hideProgressBar()
                     loadDataFromCache()
                     Toast.makeText(
-                        requireContext(),
-                        it.message.toString(),
-                        Toast.LENGTH_SHORT
+                            requireContext(),
+                            it.message.toString(),
+                            Toast.LENGTH_SHORT
                     ).show()
                 }
                 is NetworkResult.Loading -> {
-                    if(count==0){
+                    if (count == 0) {
                         loadDataFromCache()
                     }
                     count++
@@ -114,22 +118,18 @@ class WorldFragment : Fragment(),ItemClickListener {
     }
 
     private fun hideProgressBar() {
-        if(worldProgressBar != null) {
+        if (worldProgressBar != null) {
             worldProgressBar.visibility = View.INVISIBLE
         }
 
     }
 
     private fun showProgressBar() {
-        if(worldProgressBar != null) {
+        if (worldProgressBar != null) {
             worldProgressBar.visibility = View.VISIBLE
         }
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-
-    }
 
     override fun onArticleClicked(article: Article) {
 

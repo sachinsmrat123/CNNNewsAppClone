@@ -20,12 +20,13 @@ import kotlinx.coroutines.launch
 
 
 @AndroidEntryPoint
-class TopNewsFragment : Fragment(),ItemClickListener{
+class TopNewsFragment : Fragment(), ItemClickListener {
 
     var count = 0
-    private lateinit var mainViewModel:MainViewModel
-    private lateinit var mTopNewsAdapter:NewsAdapter
-//    private val mTopNewsAdapter by lazy { NewsAdapter(this) }
+    private lateinit var mainViewModel: MainViewModel
+    private lateinit var mTopNewsAdapter: NewsAdapter
+
+    //    private val mTopNewsAdapter by lazy { NewsAdapter(this) }
     private var articles = listOf<Article>()
 
 
@@ -41,48 +42,46 @@ class TopNewsFragment : Fragment(),ItemClickListener{
         super.onViewCreated(view, savedInstanceState)
 
         mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
-        mTopNewsAdapter = NewsAdapter(articles,this);
+        mTopNewsAdapter = NewsAdapter(articles, this);
 
 //        showProgressBar()
-        rvTopNews.adapter =mTopNewsAdapter
+        rvTopNews.adapter = mTopNewsAdapter
         rvTopNews.layoutManager = LinearLayoutManager(requireContext())
 
-//        requestApiData()
+        requestApiData()
 
 
-        lifecycleScope.launchWhenStarted {
-            readDatabase()
-        }
+//        lifecycleScope.launchWhenStarted {
+//            readDatabase()
+//        }
 
 
     }
 
-    private fun readDatabase(){
+    private fun readDatabase() {
         lifecycleScope.launch {
 
-            mainViewModel.getCacheTopNews.observeOnce(viewLifecycleOwner, Observer { database->
-                if (database.isNotEmpty()){
+            mainViewModel.getCacheTopNews.observeOnce(viewLifecycleOwner, Observer { database ->
+                if (database.isNotEmpty()) {
                     Log.d("TopNewsFragment", "readDatabase called!")
                     mTopNewsAdapter.setData(database[0].newsResponse.articles)
                     hideProgressBar()
-                }else{
-                    requestApiData()
-
                 }
 
             })
         }
     }
+
     private fun loadDataFromCache() {
         lifecycleScope.launch {
-           mainViewModel.getCacheTopNews.observe(viewLifecycleOwner, Observer { cachedata->
-               if (cachedata.isNotEmpty()){
-                   mTopNewsAdapter.setData(cachedata[0].newsResponse.articles)
-               }else{
-                   showProgressBar()
+            mainViewModel.getCacheTopNews.observe(viewLifecycleOwner, Observer { cachedata ->
+                if (cachedata.isNotEmpty()) {
+                    mTopNewsAdapter.setData(cachedata[0].newsResponse.articles)
+                } else {
+                    showProgressBar()
 
-               }
-           })
+                }
+            })
         }
     }
 
@@ -93,9 +92,8 @@ class TopNewsFragment : Fragment(),ItemClickListener{
 
 
             Log.d("response", "onViewCreated: $it ")
-            when(it){
-                is NetworkResult.Success ->{
-
+            when (it) {
+                is NetworkResult.Success -> {
                     hideProgressBar()
                     articles = it.data!!.articles
                     mTopNewsAdapter.setData(articles)
@@ -111,7 +109,7 @@ class TopNewsFragment : Fragment(),ItemClickListener{
                     ).show()
                 }
                 is NetworkResult.Loading -> {
-                    if(count==0){
+                    if (count == 0) {
                         loadDataFromCache()
                     }
                     count++
@@ -123,16 +121,15 @@ class TopNewsFragment : Fragment(),ItemClickListener{
     }
 
 
-
     private fun hideProgressBar() {
-        if(topNewsProgressBar != null) {
+        if (topNewsProgressBar != null) {
             topNewsProgressBar.visibility = View.INVISIBLE
         }
 
     }
 
     private fun showProgressBar() {
-        if(topNewsProgressBar != null) {
+        if (topNewsProgressBar != null) {
             topNewsProgressBar.visibility = View.VISIBLE
         }
     }
@@ -143,14 +140,14 @@ class TopNewsFragment : Fragment(),ItemClickListener{
     }
 
     override fun onSavedButtonClicked(article: Article) {
-       if(article.saved==0){
-           mainViewModel.saveArticle(article)
-           article.saved=1
+        if (article.saved == 0) {
+            mainViewModel.saveArticle(article)
+            article.saved = 1
 
-       }else{
-           mainViewModel.deleteArticle(article)
-           article.saved=0
-       }
+        } else {
+            mainViewModel.deleteArticle(article)
+            article.saved = 0
+        }
     }
 
     override fun onShareButtonClicked(article: Article) {
