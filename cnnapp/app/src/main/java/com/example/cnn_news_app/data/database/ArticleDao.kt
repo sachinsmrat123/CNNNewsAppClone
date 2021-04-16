@@ -3,7 +3,7 @@ package com.example.cnn_news_app.data.database
 import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.cnn_news_app.data.database.cache.entity.*
-import com.example.cnn_news_app.model.Article
+import com.example.cnn_news_app.data.model.Article
 
 
 @Dao

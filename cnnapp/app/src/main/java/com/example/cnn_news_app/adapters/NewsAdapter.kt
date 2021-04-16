@@ -1,14 +1,14 @@
-package com.example.cnn_news_app
+package com.example.cnn_news_app.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.cnn_news_app.model.Article
+import com.example.cnn_news_app.R
+import com.example.cnn_news_app.data.model.Article
 
 class NewsAdapter(private var articles: List<Article>,private val listener: ItemClickListener):RecyclerView.Adapter<NewsAdapter.NewsViewsHolder>() {
 

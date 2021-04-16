@@ -18,4 +18,10 @@
     <string name="get_all_the_news_most_relevant_to_you">Get all the news most relevant to you</string>
     <string name="u_s_edition">U.S edition</string>
     <string name="international">International</string>
+    <string name="dialogTitle">Delete </string>
+    <string name="dialogMessage">"Do you want to Delete"</string>
+    <string name="dialogTitleForDeleteAll">Remove All Articles</string>
+    <string name="dialogMessageForDeleteAll">Are you sure you want to remove all Articles?</string>
+    <string name="dialogTitleForDelete">Remove Articles</string>
+    <string name="dialogMessageForDelete">Are you sure you want to remove this articles?</string>
 </resources>

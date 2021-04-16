@@ -1,11 +1,11 @@
-package com.example.cnn_news_app
+package com.example.cnn_news_app.repository
 
 import androidx.lifecycle.LiveData
 import com.example.cnn_news_app.data.database.ArticleDao
 import com.example.cnn_news_app.data.database.cache.entity.*
 import com.example.cnn_news_app.data.network.NewsApi
-import com.example.cnn_news_app.model.Article
-import com.example.cnn_news_app.model.NewsResponse
+import com.example.cnn_news_app.data.model.Article
+import com.example.cnn_news_app.data.model.NewsResponse
 import dagger.hilt.android.scopes.ActivityRetainedScoped
 import retrofit2.Response
 import javax.inject.Inject

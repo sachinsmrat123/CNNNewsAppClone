@@ -12,13 +12,16 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cnn_news_app.*
-import com.example.cnn_news_app.model.Article
+import com.example.cnn_news_app.adapters.ItemClickListener
+import com.example.cnn_news_app.adapters.NewsAdapter
+import com.example.cnn_news_app.data.model.Article
+import com.example.cnn_news_app.util.NetworkResult
 import com.example.cnn_news_app.util.observeOnce
-import kotlinx.android.synthetic.main.fragment_business.*
+import com.example.cnn_news_app.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.fragment_entertainment.*
 import kotlinx.coroutines.launch
 
-class EntertainmentFragment : Fragment(),ItemClickListener{
+class EntertainmentFragment : Fragment(), ItemClickListener {
 
     var count = 0
     private lateinit var mainViewModel: MainViewModel
@@ -36,7 +39,7 @@ class EntertainmentFragment : Fragment(),ItemClickListener{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
-        mEntertainmentNewsAdapter = NewsAdapter(articles,this);
+        mEntertainmentNewsAdapter = NewsAdapter(articles, this);
 
         rvEntertainment.adapter = mEntertainmentNewsAdapter
         rvEntertainment.layoutManager = LinearLayoutManager(requireContext())

@@ -1,6 +1,5 @@
 package com.example.cnn_news_app.view.fragments.category
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -13,10 +12,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cnn_news_app.*
-import com.example.cnn_news_app.model.Article
+import com.example.cnn_news_app.adapters.ItemClickListener
+import com.example.cnn_news_app.adapters.NewsAdapter
+import com.example.cnn_news_app.data.model.Article
+import com.example.cnn_news_app.util.NetworkResult
 import com.example.cnn_news_app.util.observeOnce
+import com.example.cnn_news_app.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.fragment_us_politics.*
-import kotlinx.android.synthetic.main.fragment_world.*
 import kotlinx.coroutines.launch
 
 
