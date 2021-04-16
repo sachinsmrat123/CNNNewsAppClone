@@ -5,8 +5,10 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.example.cnn_news_app.data.database.cache.entity.TopNewsEntity
 import com.example.cnn_news_app.model.Article
 import com.example.cnn_news_app.model.NewsResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -24,11 +26,10 @@ application: Application
 
     /** Retrofit */
     var topNewsResponse:MutableLiveData<NetworkResult<NewsResponse>> = MutableLiveData()
-    var breakingNewsResponse: NewsResponse? = null
 
 
     fun getTopNews(){
-        viewModelScope.launch {
+        viewModelScope.launch(){
             getNewsSafeCall()
         }
 
@@ -42,6 +43,10 @@ application: Application
             try {
                 val response = repository.getTopNews()
                 topNewsResponse.value = handleNewsResponse(response)
+                val news = topNewsResponse.value!!.data
+                if (news!=null){
+                    insertTopNewsForCache(news)
+                }
 
             }catch (e: Exception){
                 topNewsResponse.value = NetworkResult.Error("News not found")
@@ -52,6 +57,21 @@ application: Application
         }
     }
 
+
+    /** Cache */
+
+    val getCacheTopNews: LiveData<List<TopNewsEntity>> = repository.getCacheTopNews()
+
+    private fun insertTopNewsForCache(news: NewsResponse) {
+        val newsEntity = TopNewsEntity(news)
+
+                viewModelScope.launch(Dispatchers.IO) {
+                    repository.insertTopNewsForCache(newsEntity)
+                }
+    }
+
+
+    //** Handle Internet connection */
     private fun handleNewsResponse(response: Response<NewsResponse>): NetworkResult<NewsResponse>? {
 
         when{
@@ -101,23 +121,14 @@ application: Application
         }
     }
 
-     fun getAllSavedArticles(){
-        repository.getAllArticles()
+     fun getAllSavedArticles():LiveData<List<Article>>{
+        return repository.getAllArticles()
     }
      fun deleteArticle(article: Article){
         viewModelScope.launch(Dispatchers.IO){
             repository.deleteArticle(article)
         }
     }
-
-
-
-
-
-
-
-
-
 
 
      fun deleteAllArticle(){

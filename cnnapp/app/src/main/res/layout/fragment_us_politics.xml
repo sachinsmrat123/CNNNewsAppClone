@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".view.fragments.category.UsPoliticsFragment">
 
-    <RelativeLayout
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvUsPolitics"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

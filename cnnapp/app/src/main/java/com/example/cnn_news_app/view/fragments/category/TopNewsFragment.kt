@@ -9,25 +9,24 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cnn_news_app.*
 import com.example.cnn_news_app.model.Article
+import com.example.cnn_news_app.util.observeOnce
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_top_news.*
+import kotlinx.coroutines.launch
 
 
 @AndroidEntryPoint
 class TopNewsFragment : Fragment(),ItemClickListener{
 
+    var count = 0
     private lateinit var mainViewModel:MainViewModel
     private lateinit var mTopNewsAdapter:NewsAdapter
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
-        mTopNewsAdapter = NewsAdapter(this)
-
-    }
+//    private val mTopNewsAdapter by lazy { NewsAdapter(this) }
+    private var articles = listOf<Article>()
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -41,42 +40,101 @@ class TopNewsFragment : Fragment(),ItemClickListener{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
+        mTopNewsAdapter = NewsAdapter(articles,this);
+
+//        showProgressBar()
+        rvTopNews.adapter =mTopNewsAdapter
+        rvTopNews.layoutManager = LinearLayoutManager(requireContext())
+
+//        requestApiData()
+
+
+        lifecycleScope.launchWhenStarted {
+            readDatabase()
+        }
+
+
+    }
+
+    private fun readDatabase(){
+        lifecycleScope.launch {
+
+            mainViewModel.getCacheTopNews.observeOnce(viewLifecycleOwner, Observer { database->
+                if (database.isNotEmpty()){
+                    Log.d("TopNewsFragment", "readDatabase called!")
+                    mTopNewsAdapter.setData(database[0].newsResponse.articles)
+                    hideProgressBar()
+                }else{
+                    requestApiData()
+
+                }
+
+            })
+        }
+    }
+    private fun loadDataFromCache() {
+        lifecycleScope.launch {
+           mainViewModel.getCacheTopNews.observe(viewLifecycleOwner, Observer { cachedata->
+               if (cachedata.isNotEmpty()){
+                   mTopNewsAdapter.setData(cachedata[0].newsResponse.articles)
+               }else{
+                   showProgressBar()
+
+               }
+           })
+        }
+    }
+
+    private fun requestApiData() {
+
         mainViewModel.getTopNews()
         mainViewModel.topNewsResponse.observe(viewLifecycleOwner, Observer {
+
 
             Log.d("response", "onViewCreated: $it ")
             when(it){
                 is NetworkResult.Success ->{
-                    rvTopNews.layoutManager = LinearLayoutManager(requireContext())
-                    rvTopNews.adapter = mTopNewsAdapter
-                    mTopNewsAdapter.setData(it.data!!.articles)
+
                     hideProgressBar()
+                    articles = it.data!!.articles
+                    mTopNewsAdapter.setData(articles)
 
                 }
                 is NetworkResult.Error -> {
                     hideProgressBar()
+                    loadDataFromCache()
                     Toast.makeText(
-                        requireContext(),
-                        it.message.toString(),
-                        Toast.LENGTH_SHORT
+                            requireContext(),
+                            it.message.toString(),
+                            Toast.LENGTH_SHORT
                     ).show()
                 }
                 is NetworkResult.Loading -> {
-                    showProgressBar()
+                    if(count==0){
+                        loadDataFromCache()
+                    }
+                    count++
+//                    showProgressBar()
                 }
             }
         })
 
-
-
     }
 
+
+
     private fun hideProgressBar() {
-        topNewsProgressBar.visibility = View.INVISIBLE
+        if(topNewsProgressBar != null) {
+            topNewsProgressBar.visibility = View.INVISIBLE
+        }
+
     }
 
     private fun showProgressBar() {
-        topNewsProgressBar.visibility = View.VISIBLE
+        if(topNewsProgressBar != null) {
+            topNewsProgressBar.visibility = View.VISIBLE
+        }
     }
 
 
