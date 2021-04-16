@@ -22,7 +22,7 @@ interface NewsApi {
         @Query("q")
         searchQuery:String="apple",
         @Query("apiKey")
-        apiKey:String = "87bdeddfb3d847fd88d997b72117bfe5"
+        apiKey:String = "48594a7cff5341469f3f0faedcbf115b"
     ):Response<NewsResponse>
 
 }

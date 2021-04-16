@@ -43,16 +43,16 @@ class TopNewsFragment : Fragment(),ItemClickListener{
         mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
         mTopNewsAdapter = NewsAdapter(articles,this);
 
-        showProgressBar()
+//        showProgressBar()
         rvTopNews.adapter =mTopNewsAdapter
         rvTopNews.layoutManager = LinearLayoutManager(requireContext())
 
-        requestApiData()
+//        requestApiData()
 
 
-//        lifecycleScope.launchWhenStarted {
-//            readDatabase()
-//        }
+        lifecycleScope.launchWhenStarted {
+            readDatabase()
+        }
 
 
     }
@@ -78,6 +78,9 @@ class TopNewsFragment : Fragment(),ItemClickListener{
            mainViewModel.getCacheTopNews.observe(viewLifecycleOwner, Observer { cachedata->
                if (cachedata.isNotEmpty()){
                    mTopNewsAdapter.setData(cachedata[0].newsResponse.articles)
+               }else{
+                   showProgressBar()
+
                }
            })
         }
@@ -112,7 +115,7 @@ class TopNewsFragment : Fragment(),ItemClickListener{
                         loadDataFromCache()
                     }
                     count++
-                    showProgressBar()
+//                    showProgressBar()
                 }
             }
         })

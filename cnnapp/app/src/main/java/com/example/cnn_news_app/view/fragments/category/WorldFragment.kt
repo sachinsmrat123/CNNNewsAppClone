@@ -14,12 +14,13 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cnn_news_app.*
 import com.example.cnn_news_app.model.Article
+import com.example.cnn_news_app.util.observeOnce
 import kotlinx.android.synthetic.main.fragment_world.*
 import kotlinx.coroutines.launch
 
 
 class WorldFragment : Fragment(),ItemClickListener {
-
+    var count = 0
     private lateinit var mainViewModel: MainViewModel
     private lateinit var mWorldNewsAdapter: NewsAdapter
     private var articles = listOf<Article>()
@@ -42,9 +43,40 @@ class WorldFragment : Fragment(),ItemClickListener {
         mWorldNewsAdapter = NewsAdapter(articles,this);
 
         rvWorld.adapter = mWorldNewsAdapter
-        rvWorld.layoutManager = LinearLayoutManager(context)
-        showProgressBar()
-        requestApiData()
+        rvWorld.layoutManager = LinearLayoutManager(requireContext())
+//        showProgressBar()
+//        requestApiData()
+
+        lifecycleScope.launchWhenStarted {
+            readDatabase()
+        }
+    }
+    private fun readDatabase(){
+        lifecycleScope.launch {
+
+            mainViewModel.getCacheTopNews.observeOnce(viewLifecycleOwner, Observer { database->
+                if (database.isNotEmpty()){
+                    Log.d("TopNewsFragment", "readDatabase called!")
+                    mWorldNewsAdapter.setData(database[0].newsResponse.articles)
+                    hideProgressBar()
+                }else{
+                    requestApiData()
+
+                }
+
+            })
+        }
+    }
+    private fun loadDataFromCache() {
+        lifecycleScope.launch {
+            mainViewModel.getCacheTopNews.observe(viewLifecycleOwner, Observer { cachedata->
+                if (cachedata.isNotEmpty()){
+                    mWorldNewsAdapter.setData(cachedata[0].newsResponse.articles)
+                }else{
+                    showProgressBar()
+                }
+            })
+        }
     }
     private fun requestApiData() {
 
@@ -71,22 +103,16 @@ class WorldFragment : Fragment(),ItemClickListener {
                     ).show()
                 }
                 is NetworkResult.Loading -> {
-                    showProgressBar()
+                    if(count==0){
+                        loadDataFromCache()
+                    }
+                    count++
+//                    showProgressBar()
                 }
             }
         })
-
     }
 
-    private fun loadDataFromCache() {
-        lifecycleScope.launch {
-            mainViewModel.getCacheTopNews.observe(viewLifecycleOwner, Observer { cachedata->
-                if (cachedata.isNotEmpty()){
-                    mWorldNewsAdapter.setData(cachedata[0].newsResponse.articles)
-                }
-            })
-        }
-    }
     private fun hideProgressBar() {
         if(worldProgressBar != null) {
             worldProgressBar.visibility = View.INVISIBLE
