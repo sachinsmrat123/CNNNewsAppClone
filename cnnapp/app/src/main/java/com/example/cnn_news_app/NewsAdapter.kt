@@ -10,10 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.cnn_news_app.model.Article
 
-class NewsAdapter(private val listener: ItemClickListener):RecyclerView.Adapter<NewsAdapter.NewsViewsHolder>() {
+class NewsAdapter(private var articles: List<Article>,private val listener: ItemClickListener):RecyclerView.Adapter<NewsAdapter.NewsViewsHolder>() {
 
-    private var articles = emptyList<Article>()
-
+//    private var articles = emptyList<Article>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewsHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.news_item_layout, parent, false)
         return NewsViewsHolder(view)
@@ -30,15 +29,14 @@ class NewsAdapter(private val listener: ItemClickListener):RecyclerView.Adapter<
         holder.mIvNews.setOnClickListener {
             listener.onArticleClicked(articles[position])
         }
-        var save = articles[position].saved
+
         holder.mBtnSaveNews.setOnClickListener {
             if (articles[position].saved==0){
                 holder.mBtnSaveNews.setImageResource(R.drawable.ic_saved_filled_red)
-                listener.onArticleClicked(articles[position])
+                listener.onSavedButtonClicked(articles[position])
             }else{
                 holder.mBtnSaveNews.setImageResource(R.drawable.ic_saved_outlined_black)
-                listener.onArticleClicked(articles[position])
-                articles[position].saved=0
+                listener.onSavedButtonClicked(articles[position])
             }
         }
 
@@ -57,11 +55,13 @@ class NewsAdapter(private val listener: ItemClickListener):RecyclerView.Adapter<
     }
 
     fun setData(newData: List<Article>){
-        val recipesDiffUtil =
-            NewsDiffUtil(articles, newData)
-        val diffUtilResult = DiffUtil.calculateDiff(recipesDiffUtil)
         articles = newData
-        diffUtilResult.dispatchUpdatesTo(this)
+        notifyDataSetChanged()
+
+//        val recipesDiffUtil = NewsDiffUtil(articles, newData)
+//        val diffUtilResult = DiffUtil.calculateDiff(recipesDiffUtil)
+//        articles = newData
+//        diffUtilResult.dispatchUpdatesTo(this)
     }
 
 

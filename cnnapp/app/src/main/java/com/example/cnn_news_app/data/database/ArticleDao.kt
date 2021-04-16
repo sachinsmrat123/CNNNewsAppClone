@@ -2,6 +2,7 @@ package com.example.cnn_news_app.data.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import com.example.cnn_news_app.data.database.cache.entity.*
 import com.example.cnn_news_app.model.Article
 
 
@@ -9,7 +10,7 @@ import com.example.cnn_news_app.model.Article
 interface ArticleDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(article: Article):Long
+    suspend fun insert(article: Article)
 
     @Query("SELECT * FROM articlesTable ORDER BY id ASC")
     fun getAllArticles():LiveData<List<Article>>
@@ -19,4 +20,50 @@ interface ArticleDao {
 
     @Query("DELETE FROM articlesTable")
     fun deleteAllArticles()
+
+    /** for cache */
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertTopNewsForCache(topNewsEntity: TopNewsEntity)
+
+    @Query("SELECT * FROM Top_News_Table_cache ORDER BY id ASC")
+    fun getCacheTopNews():LiveData<List<TopNewsEntity>>
+
+
+//    @Insert(onConflict = OnConflictStrategy.REPLACE)
+//    suspend fun insertWorldNewsForCache(worldNewsEntity: WorldNewsEntity)
+//
+//    @Query("SELECT * FROM World_News_Table_cache ORDER BY id ASC")
+//    fun getCacheWorldNews():LiveData<List<WorldNewsEntity>>
+//
+//    @Insert(onConflict = OnConflictStrategy.REPLACE)
+//    suspend fun insertUsPoliticsNewsForCache(usPoliticsNewsEntity: UsPoliticsNewsEntity)
+//
+//    @Query("SELECT * FROM Us_Politics_News_Table_cache ORDER BY id ASC")
+//    fun getCacheUsPoliticsNews():LiveData<List<UsPoliticsNewsEntity>>
+//
+//    @Insert(onConflict = OnConflictStrategy.REPLACE)
+//    suspend fun insertBusinessNewsForCache(businessNewsEntity: BusinessNewsEntity)
+//
+//    @Query("SELECT * FROM Business_News_Table_cache ORDER BY id ASC")
+//    fun getCacheBusinessNews():LiveData<List<BusinessNewsEntity>>
+//
+//    @Insert(onConflict = OnConflictStrategy.REPLACE)
+//    suspend fun insertHealthNewsForCache(healthNewsEntity: HealthNewsEntity)
+//
+//    @Query("SELECT * FROM health_news_table_cache ORDER BY id ASC")
+//    fun getCacheHealthNews():LiveData<List<HealthNewsEntity>>
+//
+//    @Insert(onConflict = OnConflictStrategy.REPLACE)
+//    suspend fun insertEntertainmentNewsForCache(entertainmentNewsEntity: EntertainmentNewsEntity)
+//
+//    @Query("SELECT * FROM Entertainment_News_Table_cache ORDER BY id ASC")
+//    fun getCacheEntertainmentNews():LiveData<List<EntertainmentNewsEntity>>
+//
+//    @Insert(onConflict = OnConflictStrategy.REPLACE)
+//    suspend fun insertSportsNewsForCache(sportsNewsEntity: SportsNewsEntity)
+//
+//    @Query("SELECT * FROM Sports_News_Table_cache ORDER BY id ASC")
+//    fun getCacheSportsNews():LiveData<List<SportsNewsEntity>>
+
 }
