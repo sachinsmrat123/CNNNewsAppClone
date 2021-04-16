@@ -2,6 +2,7 @@ package com.example.cnn_news_app
 
 import androidx.lifecycle.LiveData
 import com.example.cnn_news_app.data.database.ArticleDao
+import com.example.cnn_news_app.data.database.cache.entity.TopNewsEntity
 import com.example.cnn_news_app.data.network.NewsApi
 import com.example.cnn_news_app.model.Article
 import com.example.cnn_news_app.model.NewsResponse
@@ -24,8 +25,8 @@ class NewsRepository @Inject constructor(
         articleDao.insert(article)
     }
 
-    fun getAllArticles(){
-        articleDao.getAllArticles()
+    fun getAllArticles(): LiveData<List<Article>>{
+        return articleDao.getAllArticles()
     }
 
     suspend fun deleteArticle(article: Article){
@@ -35,5 +36,15 @@ class NewsRepository @Inject constructor(
     suspend fun deleteAllArticle(){
         articleDao.deleteAllArticles()
     }
+
+    suspend fun insertTopNewsForCache(topNewsEntity: TopNewsEntity){
+        articleDao.insertTopNewsForCache(topNewsEntity)
+
+    }
+
+    fun getCacheTopNews(): LiveData<List<TopNewsEntity>>{
+        return articleDao.getCacheTopNews()
+    }
+
 
 }

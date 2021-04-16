@@ -2,6 +2,7 @@ package com.example.cnn_news_app.view.fragments.category
 
 import android.os.Bundle
 import android.util.Log
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,74 +10,133 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cnn_news_app.*
 import com.example.cnn_news_app.Activity.PaginationScrollListener
 import com.example.cnn_news_app.model.Article
+import com.example.cnn_news_app.util.observeOnce
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_top_news.*
+import kotlinx.coroutines.launch
 
 
 @AndroidEntryPoint
 class TopNewsFragment : Fragment(),ItemClickListener{
 
+    var count = 0
     private lateinit var mainViewModel:MainViewModel
     private lateinit var mTopNewsAdapter:NewsAdapter
+//    private val mTopNewsAdapter by lazy { NewsAdapter(this) }
+    private var articles = listOf<Article>()
 
-    private val TAG: String = TopNewsFragment::class.java.getSimpleName()
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        printLogs("onCreate");
 
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        printLogs("onCreateView")
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
+
+
         return inflater.inflate(R.layout.fragment_top_news, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        printLogs("onViewCreated");
         super.onViewCreated(view, savedInstanceState)
-        mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
-        mTopNewsAdapter = NewsAdapter(this)
-        mainViewModel.getTopNews()
 
+        mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
+        mTopNewsAdapter = NewsAdapter(articles,this);
+
+//        showProgressBar()
+        rvTopNews.adapter =mTopNewsAdapter
         rvTopNews.layoutManager = LinearLayoutManager(requireContext())
-        rvTopNews.adapter = mTopNewsAdapter
-            mainViewModel.topNewsResponse.observe(viewLifecycleOwner, Observer {
-                Log.d("response", "onViewCreated: $it ")
-                when (it) {
-                    is NetworkResult.Success -> {
-                        mTopNewsAdapter.setData(it.data!!.articles)
-                        hideProgressBar()
-                    }
-                    is NetworkResult.Error -> {
-                        hideProgressBar()
-                        Toast.makeText(
-                            requireContext(),
-                            it.message.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                    is NetworkResult.Loading -> {
-                        showProgressBar()
-                    }
-                }
-            })
+
+//        requestApiData()
+
+
+        lifecycleScope.launchWhenStarted {
+            readDatabase()
         }
 
 
+    }
+
+    private fun readDatabase(){
+        lifecycleScope.launch {
+
+            mainViewModel.getCacheTopNews.observeOnce(viewLifecycleOwner, Observer { database->
+                if (database.isNotEmpty()){
+                    Log.d("TopNewsFragment", "readDatabase called!")
+                    mTopNewsAdapter.setData(database[0].newsResponse.articles)
+                    hideProgressBar()
+                }else{
+                    requestApiData()
+
+                }
+
+            })
+        }
+    }
+    private fun loadDataFromCache() {
+        lifecycleScope.launch {
+           mainViewModel.getCacheTopNews.observe(viewLifecycleOwner, Observer { cachedata->
+               if (cachedata.isNotEmpty()){
+                   mTopNewsAdapter.setData(cachedata[0].newsResponse.articles)
+               }else{
+                   showProgressBar()
+
+               }
+           })
+        }
+    }
+
+    private fun requestApiData() {
+
+        mainViewModel.getTopNews()
+        mainViewModel.topNewsResponse.observe(viewLifecycleOwner, Observer {
+
+
+            Log.d("response", "onViewCreated: $it ")
+            when(it){
+                is NetworkResult.Success ->{
+
+                    hideProgressBar()
+                    articles = it.data!!.articles
+                    mTopNewsAdapter.setData(articles)
+
+                }
+                is NetworkResult.Error -> {
+                    hideProgressBar()
+                    loadDataFromCache()
+                    Toast.makeText(
+                            requireContext(),
+                            it.message.toString(),
+                            Toast.LENGTH_SHORT
+                    ).show()
+                }
+                is NetworkResult.Loading -> {
+                    if(count==0){
+                        loadDataFromCache()
+                    }
+                    count++
+//                    showProgressBar()
+                }
+            }
+        })
+
+    }
+
+
+
     private fun hideProgressBar() {
-        topNewsProgressBar.visibility = View.INVISIBLE
+        if(topNewsProgressBar != null) {
+            topNewsProgressBar.visibility = View.INVISIBLE
+        }
+
     }
 
     private fun showProgressBar() {
-        topNewsProgressBar.visibility = View.VISIBLE
+        if(topNewsProgressBar != null) {
+            topNewsProgressBar.visibility = View.VISIBLE
+        }
     }
 
 
@@ -86,12 +146,12 @@ class TopNewsFragment : Fragment(),ItemClickListener{
 
     override fun onSavedButtonClicked(article: Article) {
        if(article.saved==0){
-           article.saved=1
            mainViewModel.saveArticle(article)
+           article.saved=1
 
        }else{
-           article.saved=0
            mainViewModel.deleteArticle(article)
+           article.saved=0
        }
     }
 
@@ -99,44 +159,5 @@ class TopNewsFragment : Fragment(),ItemClickListener{
 
     }
 
-
-    override fun onStart() {
-        super.onStart()
-        printLogs("onStart")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        printLogs("onResume")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        printLogs("onPause")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        printLogs("onStop")
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        printLogs("onDestroyView")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        printLogs("onDestroy")
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        printLogs("onDetach")
-    }
-
-    private fun printLogs(message: String) {
-        Log.d(TAG, message)
-    }
 
 }
