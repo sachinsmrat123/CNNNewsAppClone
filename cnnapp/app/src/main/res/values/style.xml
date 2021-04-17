@@ -5,4 +5,9 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="search_view_appearanvce">
+        <item name="android:textSize">12sp</item>
+
+    </style>
+
 </resources>

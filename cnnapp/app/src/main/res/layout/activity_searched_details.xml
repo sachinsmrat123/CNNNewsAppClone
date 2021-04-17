@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SearchedDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tvSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/toolBar"
+        app:layout_constraintEnd_toEndOf="@id/toolBar"
+        app:layout_constraintStart_toStartOf="@id/toolBar"
+        app:layout_constraintTop_toTopOf="@id/toolBar" />
+
+    <TextView
+        android:id="@+id/searchViewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="#DCDCDC"
+        app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+    <SearchView
+        android:id="@+id/searchViewDetails"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/white_rectangle_baground"
+        android:backgroundTint="@color/white"
+        android:closeIcon="@drawable/ic_close"
+        android:iconifiedByDefault="false"
+        android:queryBackground="@null"
+        android:queryHint="Find it on CNN.."
+        app:layout_constraintBottom_toBottomOf="@id/searchViewBackground"
+        app:layout_constraintEnd_toStartOf="@id/tvCancelInDetails"
+        app:layout_constraintStart_toStartOf="@id/searchViewBackground"
+        app:layout_constraintTop_toTopOf="@id/searchViewBackground" />
+
+    <TextView
+        android:id="@+id/tvCancelInDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/helvetica"
+        android:text="Cancel"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/searchViewDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchViewDetails" />
+
+    <TextView
+        android:id="@+id/tvTotalResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="No results"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchViewBackground" />
+
+    <LinearLayout
+        android:id="@+id/llSearchDetails"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rectangle_linear_layout"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tvTotalResults">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_tv_black"
+            android:gravity="center"
+            android:text="All"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_tv_white"
+            android:gravity="center"
+            android:text="Articles"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_tv_white"
+            android:gravity="center"
+            android:text="Videos"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_tv_white"
+            android:gravity="center"
+            android:text="Galleries"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/searchedDetailsProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llSearchDetails"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearchDetails"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llSearchDetails" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

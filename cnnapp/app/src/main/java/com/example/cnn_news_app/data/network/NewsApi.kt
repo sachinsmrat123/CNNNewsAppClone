@@ -16,7 +16,7 @@ interface NewsApi {
             @Query("q")
             searchQuery: String,
             @Query("apiKey")
-            apiKey: String = API_KEY
+            apiKey: String = "176d14d6430e4274900eef544f0ef984"
     ): Response<NewsResponse>
 
 //    https://newsapi.org/v2/top-headlines?country=us&apiKey=48594a7cff5341469f3f0faedcbf115b

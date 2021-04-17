@@ -1,13 +1,18 @@
 package com.example.cnn_news_app.view.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.cnn_news_app.Activity.SearchedDetailsActivity
 import com.example.cnn_news_app.R
+import com.example.cnn_news_app.adapters.NewsAdapter
 import com.example.cnn_news_app.adapters.SavedSearchedAdapter
 import com.example.cnn_news_app.adapters.SavedSearchedItemClickListener
 import com.example.cnn_news_app.data.database.SearchedArticleEntity
@@ -18,7 +23,7 @@ import kotlinx.android.synthetic.main.fragment_search.*
 @AndroidEntryPoint
 class SearchFragment : Fragment(),SavedSearchedItemClickListener {
 
-    var search=""
+
     private lateinit var mainViewModel: MainViewModel
     private lateinit var mSaved:SavedSearchedAdapter
     private var articles = listOf<SearchedArticleEntity>()
@@ -34,11 +39,15 @@ class SearchFragment : Fragment(),SavedSearchedItemClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
+        rvSearchedSaved.layoutManager = LinearLayoutManager(requireContext())
+        rvSearchedSaved.adapter = SavedSearchedAdapter(articles, this);
         mSaved = SavedSearchedAdapter(articles, this);
 
-        search = newsSearchView.toString()
+        mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
+        mainViewModel.getAllSavedSearched().observe(viewLifecycleOwner, Observer {
+            mSaved.setData(it)
+        })
+
 
         newsSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
 
@@ -48,19 +57,23 @@ class SearchFragment : Fragment(),SavedSearchedItemClickListener {
             }
 
             override fun onQueryTextSubmit(s: String): Boolean {
-                if (search.isNotEmpty() || search!=""){
-                    val searchedArticleEntity = SearchedArticleEntity(search)
+                if (s.isNotEmpty()){
+                    val searchedArticleEntity = SearchedArticleEntity(s)
                     mainViewModel.insertSearchedNews(searchedArticleEntity)
+                    val intent = Intent(requireContext(),SearchedDetailsActivity::class.java)
+                    intent.putExtra("searchString",s)
+                    startActivity(intent)
 
                 }
-
                 return true
             }
         })
-
     }
 
-    override fun onSearchedItemClicked(searchedArticleEntity: SearchedArticleEntity) {
 
+    override fun onSearchedItemClicked(searchedArticleEntity: SearchedArticleEntity) {
+        val intent = Intent(requireContext(),SearchedDetailsActivity::class.java)
+        intent.putExtra("searchString",searchedArticleEntity.searchedNews)
+        startActivity(intent)
     }
 }

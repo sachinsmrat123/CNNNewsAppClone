@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cnn_news_app.*
-import com.example.cnn_news_app.adapters.Saveds
+import com.example.cnn_news_app.adapters.ItemCliclickListeners
 import com.example.cnn_news_app.adapters.NewsAdapter
 import com.example.cnn_news_app.data.model.Article
 import com.example.cnn_news_app.util.NetworkResult
@@ -21,7 +21,7 @@ import com.example.cnn_news_app.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.fragment_health.*
 import kotlinx.coroutines.launch
 
-class HealthFragment : Fragment(), Saveds {
+class HealthFragment : Fragment(), ItemCliclickListeners {
 
     var count = 0
     private lateinit var mainViewModel: MainViewModel

@@ -10,7 +10,7 @@ import com.bumptech.glide.Glide
 import com.example.cnn_news_app.R
 import com.example.cnn_news_app.data.model.Article
 
-class NewsAdapter(private var articles: List<Article>,private val listener: Saveds):RecyclerView.Adapter<NewsAdapter.NewsViewsHolder>() {
+class NewsAdapter(private var articles: List<Article>,private val listener: ItemCliclickListeners):RecyclerView.Adapter<NewsAdapter.NewsViewsHolder>() {
 
 //    private var articles = emptyList<Article>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewsHolder {
