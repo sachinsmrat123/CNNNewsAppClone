@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "643640873019",
+    "project_id": "cnnclone-cb2bd",
+    "storage_bucket": "cnnclone-cb2bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643640873019:android:4871dd9a63b569364a4c1e",
+        "android_client_info": {
+          "package_name": "com.example.cnn_news_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "643640873019-u9nm5440hpv1tept6htvcs82rnjr8a07.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDclsgenxn-iN0LfJcvFcd5fMhosjnmgI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "643640873019-u9nm5440hpv1tept6htvcs82rnjr8a07.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

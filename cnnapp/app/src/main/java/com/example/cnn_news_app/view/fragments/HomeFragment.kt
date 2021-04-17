@@ -1,5 +1,6 @@
 package com.example.cnn_news_app.view.fragments
 
+import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -11,14 +12,15 @@ import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
 import com.example.cnn_news_app.MainActivity
 import com.example.cnn_news_app.R
-import com.example.cnn_news_app.ViewPagerAdapter
+import com.example.cnn_news_app.adapters.ViewPagerAdapter
+import com.example.cnn_news_app.liveTv.activity.liveTvActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
-    private val TAG: String = HomeFragment::class.java.getSimpleName()
+
 
 
     override fun onCreateView(
@@ -32,6 +34,10 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 //        viewPager.adapter = ViewPagerAdapter(requireActivity().supportFragmentManager)
+        tvWatchTv.setOnClickListener {
+            val intent = Intent (activity, liveTvActivity::class.java)
+            startActivity(intent)
+        }
         viewPager.adapter = ViewPagerAdapter(childFragmentManager)
         tabLayout.setupWithViewPager(viewPager)
     }

@@ -1,4 +1,4 @@
-package com.example.cnn_news_app
+package com.example.cnn_news_app.util
 
 sealed class NetworkResult<T>(
     val data: T? = null,

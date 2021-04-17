@@ -8,21 +8,21 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.cnn_news_app.view.fragments.HomeFragment"
-        android:label="Home"
+        android:label=""
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.cnn_news_app.view.fragments.SearchFragment"
-        android:label="Search"
+        android:label=""
         tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/savedFragment"
         android:name="com.example.cnn_news_app.view.fragments.SavedFragment"
-        android:label="Saved Stories"
+        android:label=""
         tools:layout="@layout/fragment_saved" />
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.cnn_news_app.view.fragments.ProfileFragment"
-        android:label="Preferences"
-        tools:layout="@layout/fragment_profile" /><action android:id="@+id/action_global_homeFragment" app:destination="@id/homeFragment"/>
+        android:label=""
+        tools:layout="@layout/fragment_profile" />
 </navigation>
