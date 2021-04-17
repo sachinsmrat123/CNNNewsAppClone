@@ -10,7 +10,7 @@ import com.example.cnn_news_app.data.model.Article
 @Database(
     entities = [Article::class,TopNewsEntity::class ,BusinessNewsEntity::class,
         EntertainmentNewsEntity::class,HealthNewsEntity::class,SportsNewsEntity::class,
-        UsPoliticsNewsEntity::class,WorldNewsEntity::class],
+        UsPoliticsNewsEntity::class,WorldNewsEntity::class,SearchedArticleEntity::class],
     version = 1,
     exportSchema = false
 

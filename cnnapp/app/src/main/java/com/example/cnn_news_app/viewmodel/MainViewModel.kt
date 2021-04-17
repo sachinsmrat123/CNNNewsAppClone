@@ -8,6 +8,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+import com.example.cnn_news_app.data.database.SearchedArticleEntity
 import com.example.cnn_news_app.repository.NewsRepository
 import com.example.cnn_news_app.data.database.cache.entity.*
 import com.example.cnn_news_app.data.model.Article
@@ -304,6 +305,41 @@ class MainViewModel @Inject constructor(
         }
     }
 
+    /** ROOM DATABASE */
+
+    fun saveArticle(article: Article){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.saveArticles(article)
+        }
+    }
+
+    fun getAllSavedArticles():LiveData<List<Article>>{
+        return repository.getAllArticles()
+    }
+    fun deleteArticle(article: Article){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.deleteArticle(article)
+        }
+    }
+
+    fun deleteAllArticle(){
+        viewModelScope.launch(Dispatchers.IO){
+            repository.deleteAllArticle()
+        }
+    }
+
+    // Search Saved
+
+     fun insertSearchedNews(searchedArticleEntity: SearchedArticleEntity){
+         viewModelScope.launch(Dispatchers.IO){
+             repository.insertSearchedNews(searchedArticleEntity)
+         }
+
+    }
+
+    fun getAllSavedSearched():LiveData<List<SearchedArticleEntity>>{
+        return repository.getAllSavedSearched()
+    }
 
     /** Handle Internet connection */
     private fun handleNewsResponse(response: Response<NewsResponse>): NetworkResult<NewsResponse>? {
@@ -346,27 +382,4 @@ class MainViewModel @Inject constructor(
         }
     }
 
-
-    /** ROOM DATABASE */
-
-     fun saveArticle(article: Article){
-        viewModelScope.launch(Dispatchers.IO){
-            repository.saveArticles(article)
-        }
-    }
-
-     fun getAllSavedArticles():LiveData<List<Article>>{
-        return repository.getAllArticles()
-    }
-     fun deleteArticle(article: Article){
-        viewModelScope.launch(Dispatchers.IO){
-            repository.deleteArticle(article)
-        }
-    }
-
-     fun deleteAllArticle(){
-        viewModelScope.launch(Dispatchers.IO){
-            repository.deleteAllArticle()
-        }
-    }
 }

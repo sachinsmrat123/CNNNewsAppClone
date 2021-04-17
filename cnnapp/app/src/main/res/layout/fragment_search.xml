@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@id/toolBar"/>
 
     <SearchView
-        android:id="@+id/searchView"
+        android:id="@+id/newsSearchView"
         android:layout_width="0dp"
         android:layout_height="42dp"
         android:queryHint="Find it on CNN.."
@@ -53,6 +53,7 @@
         android:background="@drawable/white_rectangle_baground"
         app:layout_constraintStart_toStartOf="@id/searchViewBackground"
         android:queryBackground="@null"
+        style="@style/search_view_appearanvce"
         app:layout_constraintTop_toTopOf="@id/searchViewBackground"
         app:layout_constraintBottom_toBottomOf="@id/searchViewBackground"
         app:layout_constraintEnd_toStartOf="@id/tvCancle"
@@ -70,9 +71,9 @@
         android:focusable="true"
         android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/searchView"
+        app:layout_constraintBottom_toBottomOf="@id/newsSearchView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/searchView" />
+        app:layout_constraintTop_toTopOf="@+id/newsSearchView" />
 
     <TextView
         android:id="@+id/tvRecentSearches"
@@ -97,10 +98,11 @@
         app:layout_constraintTop_toBottomOf="@id/searchViewBackground" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearchedSaved"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginTop="15dp"
-        android:background="@color/white"
         app:layout_constraintTop_toBottomOf="@id/tvRecentSearches"/>
 
 

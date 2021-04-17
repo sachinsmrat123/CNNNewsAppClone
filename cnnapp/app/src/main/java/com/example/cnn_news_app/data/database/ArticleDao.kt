@@ -21,6 +21,14 @@ interface ArticleDao {
     @Query("DELETE FROM articlesTable")
     fun deleteAllArticles()
 
+    /** Searched saved */
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertSearchedNews(searchedArticleEntity: SearchedArticleEntity)
+
+    @Query("SELECT * FROM SearchedArticlesSaved ORDER BY id ASC")
+    fun getAllSavedSearched():LiveData<List<SearchedArticleEntity>>
+
     /** FOR CACHE */
 
 
