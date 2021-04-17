@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cnn_news_app.*
-import com.example.cnn_news_app.adapters.ItemClickListener
+import com.example.cnn_news_app.adapters.Saveds
 import com.example.cnn_news_app.adapters.NewsAdapter
 import com.example.cnn_news_app.data.model.Article
 import com.example.cnn_news_app.util.NetworkResult
@@ -22,7 +22,7 @@ import kotlinx.android.synthetic.main.fragment_world.*
 import kotlinx.coroutines.launch
 
 
-class WorldFragment : Fragment(), ItemClickListener {
+class WorldFragment : Fragment(), Saveds {
     var count = 0
     private lateinit var mainViewModel: MainViewModel
     private lateinit var mWorldNewsAdapter: NewsAdapter

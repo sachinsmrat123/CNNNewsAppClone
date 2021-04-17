@@ -5,16 +5,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.cnn_news_app.R
+import com.example.cnn_news_app.data.database.SearchedArticleEntity
 import com.example.cnn_news_app.data.model.Article
 
-class SavedSearchedAdapter(private var articles: List<Article>, private val listener: ItemClickListener):RecyclerView.Adapter<SavedSearchedAdapter.NewsViewsHolder>() {
+class SavedSearchedAdapter(private var articles: List<SearchedArticleEntity>, private val listener: SavedSearchedItemClickListener):RecyclerView.Adapter<SavedSearchedAdapter.NewsViewsHolder>() {
 
 //    private var articles = emptyList<Article>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewsHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.news_item_layout, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.saved_news_item_layout, parent, false)
         return NewsViewsHolder(view)
     }
 
@@ -23,38 +25,22 @@ class SavedSearchedAdapter(private var articles: List<Article>, private val list
     }
 
     override fun onBindViewHolder(holder: NewsViewsHolder, position: Int) {
-        holder.mTvNews.text = articles[position].title
-        Glide.with(holder.mIvNews).load(articles[position].urlToImage).into(holder.mIvNews)
+        holder.mTvTitle.text = articles[position].searchedNews
 
-        holder.mIvNews.setOnClickListener {
-            listener.onArticleClicked(articles[position])
-        }
 
-        holder.mBtnSaveNews.setOnClickListener {
-            if (articles[position].saved==0){
-                holder.mBtnSaveNews.setImageResource(R.drawable.ic_saved_filled_red)
-                listener.onSavedButtonClicked(articles[position])
-            }else{
-                holder.mBtnSaveNews.setImageResource(R.drawable.ic_saved_outlined_black)
-                listener.onSavedButtonClicked(articles[position])
-            }
-        }
-
-        holder.mBtnShareNews.setOnClickListener {
-            listener.onShareButtonClicked(articles[position])
+        holder.mSavedConstraint.setOnClickListener {
+            listener.onSearchedItemClicked(articles[position])
         }
     }
 
     class NewsViewsHolder(view:View):RecyclerView.ViewHolder(view) {
 
-        val mTvNews: TextView = view.findViewById(R.id.tvNews)
-        val mIvNews: ImageView = view.findViewById(R.id.ivNews)
-        val mBtnShareNews: ImageView = view.findViewById(R.id.btnShareNews)
-        val mBtnSaveNews: ImageView = view.findViewById(R.id.btnSaveNews)
+        val mTvTitle: TextView = view.findViewById(R.id.tvSearchSaved)
+        val mSavedConstraint:ConstraintLayout  = view.findViewById(R.id.constraintSaved)
 
     }
 
-    fun setData(newData: List<Article>){
+    fun setData(newData: List<SearchedArticleEntity>){
         articles = newData
         notifyDataSetChanged()
 

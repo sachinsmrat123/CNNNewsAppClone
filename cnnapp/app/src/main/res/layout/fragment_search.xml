@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@id/toolBar"/>
 
     <SearchView
-        android:id="@+id/searchView"
+        android:id="@+id/newsSearchView"
         android:layout_width="0dp"
         android:layout_height="42dp"
         android:queryHint="Find it on CNN.."
@@ -97,8 +97,9 @@
         app:layout_constraintTop_toBottomOf="@id/searchViewBackground" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSearchedSaved"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="0dp"
         android:layout_marginTop="15dp"
         android:background="@color/white"
         app:layout_constraintTop_toBottomOf="@id/tvRecentSearches"/>

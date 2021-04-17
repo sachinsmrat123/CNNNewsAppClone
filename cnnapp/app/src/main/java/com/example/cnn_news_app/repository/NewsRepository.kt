@@ -2,6 +2,7 @@ package com.example.cnn_news_app.repository
 
 import androidx.lifecycle.LiveData
 import com.example.cnn_news_app.data.database.ArticleDao
+import com.example.cnn_news_app.data.database.SearchedArticleEntity
 import com.example.cnn_news_app.data.database.cache.entity.*
 import com.example.cnn_news_app.data.network.NewsApi
 import com.example.cnn_news_app.data.model.Article
@@ -60,6 +61,16 @@ class NewsRepository @Inject constructor(
         articleDao.deleteAllArticles()
     }
 
+    /** Search Saved */
+
+    suspend fun insertSearchedNews(searchedArticleEntity: SearchedArticleEntity){
+        articleDao.insertSearchedNews(searchedArticleEntity)
+
+    }
+
+    fun getAllSavedSearched():LiveData<List<SearchedArticleEntity>>{
+        return articleDao.getAllSavedSearched()
+    }
 
     /** CACHE */
 
