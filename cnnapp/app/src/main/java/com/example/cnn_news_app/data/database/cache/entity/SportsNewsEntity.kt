@@ -2,11 +2,10 @@ package com.example.cnn_news_app.data.database.cache.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.cnn_news_app.model.Article
-import com.example.cnn_news_app.model.NewsResponse
+import com.example.cnn_news_app.data.model.NewsResponse
 
 
-//@Entity(tableName = "Sports_News_Table_cache")
+@Entity(tableName = "Sports_News_Table_cache")
 class SportsNewsEntity(
     var newsResponse: NewsResponse
 ) {

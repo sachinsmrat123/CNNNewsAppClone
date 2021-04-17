@@ -1,4 +1,4 @@
-package com.example.cnn_news_app
+package com.example.cnn_news_app.adapters
 
 
 import androidx.fragment.app.Fragment

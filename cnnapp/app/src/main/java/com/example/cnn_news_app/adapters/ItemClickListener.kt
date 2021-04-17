@@ -1,6 +1,6 @@
-package com.example.cnn_news_app
+package com.example.cnn_news_app.adapters
 
-import com.example.cnn_news_app.model.Article
+import com.example.cnn_news_app.data.model.Article
 
 interface ItemClickListener {
     fun onArticleClicked(article: Article)

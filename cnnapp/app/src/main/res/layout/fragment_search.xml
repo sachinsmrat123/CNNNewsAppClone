@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8F8F8"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.fragments.SearchFragment">
 
@@ -29,6 +30,78 @@
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/searchViewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="#DCDCDC"
+        app:layout_constraintTop_toBottomOf="@id/toolBar"/>
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:queryHint="Find it on CNN.."
+        android:iconifiedByDefault="false"
+        android:layout_marginStart="15dp"
+        android:closeIcon="@drawable/ic_close"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/white_rectangle_baground"
+        app:layout_constraintStart_toStartOf="@id/searchViewBackground"
+        android:queryBackground="@null"
+        app:layout_constraintTop_toTopOf="@id/searchViewBackground"
+        app:layout_constraintBottom_toBottomOf="@id/searchViewBackground"
+        app:layout_constraintEnd_toStartOf="@id/tvCancle"
+        android:layout_alignParentTop="true"
+        />
+
+    <TextView
+        android:id="@+id/tvCancle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/helvetica"
+        android:text="Cancel"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/searchView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchView" />
+
+    <TextView
+        android:id="@+id/tvRecentSearches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/searchViewBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Recent Serches"
+        android:layout_margin="15dp"/>
+
+    <TextView
+        android:id="@+id/tvClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/helvetica"
+        android:text="Clear"
+        android:textColor="@color/red"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchViewBackground" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tvRecentSearches"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

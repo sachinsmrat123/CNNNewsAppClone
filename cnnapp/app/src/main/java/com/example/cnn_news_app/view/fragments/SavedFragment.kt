@@ -5,30 +5,33 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.cnn_news_app.ItemClickListener
-import com.example.cnn_news_app.MainViewModel
-import com.example.cnn_news_app.NewsAdapter
-import com.example.cnn_news_app.R
-import com.example.cnn_news_app.model.Article
+import com.example.cnn_news_app.*
+import com.example.cnn_news_app.adapters.SavedItemClickListener
+import com.example.cnn_news_app.adapters.SavedNewsAdapter
+import com.example.cnn_news_app.data.model.Article
+import com.example.cnn_news_app.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_saved.*
-import kotlinx.android.synthetic.main.fragment_top_news.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class SavedFragment : Fragment(), ItemClickListener {
+class SavedFragment : Fragment(), SavedItemClickListener {
     private lateinit var mainViewModel: MainViewModel
     private var articles = listOf<Article>()
-    private lateinit var mSavedNewsAdapter:NewsAdapter
+    private lateinit var mSavedNewsAdapter: SavedNewsAdapter
 
 //    private val mSavedNewsAdapter by lazy { NewsAdapter(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
-        mSavedNewsAdapter = NewsAdapter(articles,this);
+        mSavedNewsAdapter = SavedNewsAdapter(articles, this);
 
 
     }
@@ -49,17 +52,65 @@ class SavedFragment : Fragment(), ItemClickListener {
             rvSaved.adapter = mSavedNewsAdapter
             mSavedNewsAdapter.setData(it)
         })
+
+        btnDeleteAll.setOnClickListener {
+
+            val builder = AlertDialog.Builder(requireContext())
+
+            builder.setTitle(R.string.dialogTitleForDeleteAll)
+
+            builder.setMessage(R.string.dialogMessageForDeleteAll)
+
+            builder.setPositiveButton("REMOVE"){dialogInterface, which ->
+
+                CoroutineScope(Dispatchers.IO).launch {
+
+                    mainViewModel.deleteAllArticle()
+
+                }
+
+            }
+            builder.setNegativeButton("CANCEL"){dialogInterface, which ->
+
+            }
+            val alertDialog: AlertDialog = builder.create()
+            alertDialog.setCancelable(true)
+            alertDialog.show()
+        }
     }
-
-
 
     override fun onArticleClicked(article: Article) {
+
     }
 
-    override fun onSavedButtonClicked(article: Article) {
+    override fun onDeleteButtonClicked(article: Article) {
+        val builder = AlertDialog.Builder(requireContext())
+
+        builder.setTitle(R.string.dialogTitleForDeleteAll)
+
+        builder.setMessage(R.string.dialogMessageForDeleteAll)
+
+        builder.setPositiveButton("REMOVE"){dialogInterface, which ->
+
+            CoroutineScope(Dispatchers.IO).launch {
+
+                mainViewModel.deleteArticle(article)
+
+            }
+
+        }
+        builder.setNegativeButton("CANCEL"){dialogInterface, which ->
+
+        }
+        val alertDialog: AlertDialog = builder.create()
+        alertDialog.setCancelable(true)
+        alertDialog.show()
+
     }
 
     override fun onShareButtonClicked(article: Article) {
+
     }
+
 
 }
