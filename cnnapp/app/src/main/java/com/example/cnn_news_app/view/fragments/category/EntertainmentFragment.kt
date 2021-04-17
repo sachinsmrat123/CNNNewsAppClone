@@ -131,6 +131,14 @@ class EntertainmentFragment : Fragment(), ItemClickListener {
     }
 
     override fun onSavedButtonClicked(article: Article) {
+        if (article.saved == 0) {
+            mainViewModel.saveArticle(article)
+            article.saved = 1
+
+        } else {
+            mainViewModel.deleteArticle(article)
+            article.saved = 0
+        }
 
     }
 
