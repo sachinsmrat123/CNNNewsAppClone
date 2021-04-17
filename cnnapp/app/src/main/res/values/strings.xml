@@ -13,9 +13,17 @@
     <string name="alerts_that_matter_to_you">Alerts that matter to you</string>
     <string name="cnn_watch_now">CNN Watch Now</string>
     <string name="sports">Sports</string>
+    <string name="checkSwitchStatement">Check here if you would like to receive updates and offers from CNN and its affiliates</string>
     <string name="done">Done</string>
-    <string name="next">NEXT</string>
+    <string name="signUpText">Create a free CNN account for tools to enhance your essential daily news</string>
+    <string name="login">Log In</string>
+    <string name="create_account">Create Account</string>
+    <string name="loginStatement">Login in for free features that enhance your essential daily news</string>
+    <string name="next">Next</string>
+    <string name="signUpPolicy">By Clicking Create Account you Confirm that you have read and agree to our Terms of Use and acknowledge out Privacy Policy </string>
     <string name="get_all_the_news_most_relevant_to_you">Get all the news most relevant to you</string>
     <string name="u_s_edition">U.S edition</string>
     <string name="international">International</string>
+    <string name="loginRegisterStatement">Need a CNN Account? Sign up</string>
+    <string name="signUpRegisterStatement">Already have an account? Log in.</string>
 </resources>

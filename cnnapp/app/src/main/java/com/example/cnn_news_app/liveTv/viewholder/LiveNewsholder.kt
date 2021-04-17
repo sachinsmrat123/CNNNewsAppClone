@@ -1,10 +1,8 @@
-package com.example.cnn_news_app.adapter
+package com.example.cnn_news_app.liveTv.viewholder
 
 import android.view.View
-import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.cnn_news_app.R
 import com.example.cnn_news_app.model.LiveNews
 import kotlinx.android.synthetic.main.item_live_news.view.*
 

@@ -1,9 +1,10 @@
-package com.example.cnn_news_app.adapter
+package com.example.cnn_news_app.liveTv.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cnn_news_app.R
+import com.example.cnn_news_app.liveTv.viewholder.LiveNewsholder
 import com.example.cnn_news_app.model.LiveNews
 
 class LiveNewsAdapter( private  val VideoList: MutableList<LiveNews>) : RecyclerView.Adapter<LiveNewsholder>() {

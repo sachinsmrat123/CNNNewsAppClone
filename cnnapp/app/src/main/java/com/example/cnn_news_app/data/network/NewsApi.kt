@@ -17,12 +17,12 @@ interface NewsApi {
 //        apiKey:String = "8b88078f00054b9cbeb4786b4d368590"
 //    ):Response<NewsResponse>
 
-    @GET("v2/everything")
+    @GET("cnn/breakingnews")
     suspend fun getTopNews(
-        @Query("q")
-        searchQuery:String="apple",
-        @Query("apiKey")
-        apiKey:String = "48594a7cff5341469f3f0faedcbf115b"
+//        @Query("q")
+//        searchQuery:String="apple",
+//        @Query("apiKey")
+//        apiKey:String = "48594a7cff5341469f3f0faedcbf115b"
     ):Response<NewsResponse>
 
 }
