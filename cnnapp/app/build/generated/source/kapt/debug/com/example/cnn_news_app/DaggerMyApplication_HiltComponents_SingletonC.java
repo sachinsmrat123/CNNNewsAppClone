@@ -19,6 +19,7 @@ import com.example.cnn_news_app.di.NetworkModule_ProvideApiServiceFactory;
 import com.example.cnn_news_app.di.NetworkModule_ProvideConverterFactoryFactory;
 import com.example.cnn_news_app.di.NetworkModule_ProvideHttpClientFactory;
 import com.example.cnn_news_app.di.NetworkModule_ProvideRetrofitInstanceFactory;
+import com.example.cnn_news_app.repository.NewsRepository;
 import com.example.cnn_news_app.view.fragments.HomeFragment;
 import com.example.cnn_news_app.view.fragments.ProfileFragment;
 import com.example.cnn_news_app.view.fragments.SavedFragment;
@@ -40,8 +41,10 @@ import dagger.hilt.android.internal.modules.ApplicationContextModule;
 import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideApplicationFactory;
 import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideContextFactory;
 import dagger.internal.DoubleCheck;
+import dagger.internal.MapBuilder;
 import dagger.internal.MemoizedSentinel;
 import dagger.internal.Preconditions;
+import dagger.internal.SetBuilder;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
@@ -297,7 +300,7 @@ public final class DaggerMyApplication_HiltComponents_SingletonC extends MyAppli
 
       @Override
       public Set<String> getViewModelKeys() {
-        return Collections.<String>singleton(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide());
+        return SetBuilder.<String>newSetBuilder(2).add(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(com.example.cnn_news_app.viewmodel.MainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
       }
 
       @Override
@@ -435,6 +438,8 @@ public final class DaggerMyApplication_HiltComponents_SingletonC extends MyAppli
     private final class ViewModelCImpl extends MyApplication_HiltComponents.ViewModelC {
       private volatile Provider<MainViewModel> mainViewModelProvider;
 
+      private volatile Provider<com.example.cnn_news_app.viewmodel.MainViewModel> mainViewModelProvider2;
+
       private ViewModelCImpl(SavedStateHandle savedStateHandle) {
 
       }
@@ -452,9 +457,22 @@ public final class DaggerMyApplication_HiltComponents_SingletonC extends MyAppli
         return (Provider<MainViewModel>) local;
       }
 
+      private com.example.cnn_news_app.viewmodel.MainViewModel mainViewModel2() {
+        return new com.example.cnn_news_app.viewmodel.MainViewModel(ActivityRetainedCImpl.this.newsRepository(), ApplicationContextModule_ProvideApplicationFactory.provideApplication(DaggerMyApplication_HiltComponents_SingletonC.this.applicationContextModule));
+      }
+
+      private Provider<com.example.cnn_news_app.viewmodel.MainViewModel> mainViewModelProvider2() {
+        Object local = mainViewModelProvider2;
+        if (local == null) {
+          local = new SwitchingProvider<>(1);
+          mainViewModelProvider2 = (Provider<com.example.cnn_news_app.viewmodel.MainViewModel>) local;
+        }
+        return (Provider<com.example.cnn_news_app.viewmodel.MainViewModel>) local;
+      }
+
       @Override
       public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-        return Collections.<String, Provider<ViewModel>>singletonMap("com.example.cnn_news_app.MainViewModel", (Provider) mainViewModelProvider());
+        return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(2).put("com.example.cnn_news_app.MainViewModel", (Provider) mainViewModelProvider()).put("com.example.cnn_news_app.viewmodel.MainViewModel", (Provider) mainViewModelProvider2()).build();
       }
 
       private final class SwitchingProvider<T> implements Provider<T> {
@@ -470,6 +488,9 @@ public final class DaggerMyApplication_HiltComponents_SingletonC extends MyAppli
           switch (id) {
             case 0: // com.example.cnn_news_app.MainViewModel 
             return (T) ViewModelCImpl.this.mainViewModel();
+
+            case 1: // com.example.cnn_news_app.viewmodel.MainViewModel 
+            return (T) ViewModelCImpl.this.mainViewModel2();
 
             default: throw new AssertionError(id);
           }

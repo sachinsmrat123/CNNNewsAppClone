@@ -9,8 +9,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.cnn_news_app.data.database.cache.entity.TopNewsEntity
-import com.example.cnn_news_app.model.Article
-import com.example.cnn_news_app.model.NewsResponse
+import com.example.cnn_news_app.data.model.Article
+import com.example.cnn_news_app.data.model.NewsResponse
+
+import com.example.cnn_news_app.repository.NewsRepository
+import com.example.cnn_news_app.util.NetworkResult
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -19,8 +22,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-private val repository: NewsRepository,
-application: Application
+    private val repository: NewsRepository,
+    application: Application
 ):AndroidViewModel(application) {
 
 

@@ -1,7 +1,10 @@
-#Fri Apr 16 19:47:17 IST 2021
-base.0=C\:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+#Sat Apr 17 17:51:29 IST 2021
+path.2=classes2.dex
 path.1=classes.dex
-renamed.1=classes2.dex
 path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
+base.2=C\:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 base.1=C\:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+base.0=C\:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex

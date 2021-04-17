@@ -7,7 +7,7 @@
     tools:context=".view.fragments.ProfileFragment">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolBarDetailed"
+        android:id="@+id/toolBarhome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,10 +19,10 @@
 
     <TextView
         android:id="@+id/tvPreferences"
-        app:layout_constraintTop_toTopOf="@id/toolBarDetailed"
-        app:layout_constraintBottom_toBottomOf="@id/toolBarDetailed"
-        app:layout_constraintEnd_toEndOf="@id/toolBarDetailed"
-        app:layout_constraintStart_toStartOf="@id/toolBarDetailed"
+        app:layout_constraintTop_toTopOf="@id/toolBarhome"
+        app:layout_constraintBottom_toBottomOf="@id/toolBarhome"
+        app:layout_constraintEnd_toEndOf="@id/toolBarhome"
+        app:layout_constraintStart_toStartOf="@id/toolBarhome"
         android:text="Preferences"
         android:textSize="20sp"
         android:textColor="@color/white"
@@ -48,7 +48,7 @@
                 android:layout_marginTop="20dp"
                 android:text="ACCOUNT"
                 app:layout_constraintStart_toStartOf="@+id/guideline3"
-                app:layout_constraintTop_toBottomOf="@+id/toolBarDetailed" />
+                app:layout_constraintTop_toBottomOf="@+id/toolBarhome" />
 
             <TextView
                 android:clickable="true"

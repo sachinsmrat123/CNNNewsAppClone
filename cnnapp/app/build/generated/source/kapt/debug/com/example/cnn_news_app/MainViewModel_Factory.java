@@ -2,6 +2,7 @@
 package com.example.cnn_news_app;
 
 import android.app.Application;
+import com.example.cnn_news_app.repository.NewsRepository;
 import dagger.internal.Factory;
 import javax.inject.Provider;
 

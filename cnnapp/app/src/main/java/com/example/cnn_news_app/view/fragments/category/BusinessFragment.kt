@@ -1,5 +1,6 @@
 package com.example.cnn_news_app.view.fragments.category
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -11,7 +12,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.cnn_news_app.*
+import com.example.cnn_news_app.Activity.DetailedNews
 import com.example.cnn_news_app.adapters.ItemClickListener
 import com.example.cnn_news_app.adapters.NewsAdapter
 import com.example.cnn_news_app.data.model.Article
@@ -23,7 +26,7 @@ import kotlinx.coroutines.launch
 
 
 class BusinessFragment : Fragment(), ItemClickListener {
-
+    private lateinit var swipeRefresh: SwipeRefreshLayout
     var count = 0
     private lateinit var mainViewModel: MainViewModel
     private lateinit var mBusinessNewsAdapter: NewsAdapter
@@ -46,6 +49,10 @@ class BusinessFragment : Fragment(), ItemClickListener {
         rvBusiness.adapter = mBusinessNewsAdapter
         rvBusiness.layoutManager = LinearLayoutManager(requireContext())
 //        showProgressBar()
+        swipeRefresh= view.findViewById(R.id.swiperefresh_items)
+        swipeRefresh.setOnRefreshListener {
+            requestApiData()
+        }
         requestApiData()
 
 //        lifecycleScope.launchWhenStarted {
@@ -84,6 +91,9 @@ class BusinessFragment : Fragment(), ItemClickListener {
     private fun requestApiData() {
 
         mainViewModel.getBusinessNews()
+        if(swipeRefresh.isRefreshing){
+            swipeRefresh.isRefreshing = false
+        }
         mainViewModel.businessNewsResponse.observe(requireActivity(), Observer {
 
 
@@ -131,7 +141,9 @@ class BusinessFragment : Fragment(), ItemClickListener {
 
 
     override fun onArticleClicked(article: Article) {
-
+        val intent= Intent(context, DetailedNews::class.java)
+        intent.putExtra("newsUrl",article.url)
+        startActivity(intent)
     }
 
     override fun onSavedButtonClicked(article: Article) {
@@ -147,7 +159,13 @@ class BusinessFragment : Fragment(), ItemClickListener {
     }
 
     override fun onShareButtonClicked(article: Article) {
-
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.type = "text/plain"
+        var body = article.url;
+        var sub = "Cnn News";
+        intent.putExtra(Intent.EXTRA_SUBJECT,sub);
+        intent.putExtra(Intent.EXTRA_TEXT,body);
+        startActivity(Intent.createChooser(intent, "Share Using"))
     }
 
 }

@@ -148,6 +148,7 @@ public final class MyApplication_HiltComponents {
       modules = {
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           MainViewModel_HiltModules.KeyModule.class,
+          com.example.cnn_news_app.viewmodel.MainViewModel_HiltModules.KeyModule.class,
           ActivityCBuilderModule.class,
           ViewModelCBuilderModule.class
       }
@@ -186,7 +187,8 @@ public final class MyApplication_HiltComponents {
   @Subcomponent(
       modules = {
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
-          MainViewModel_HiltModules.BindsModule.class
+          MainViewModel_HiltModules.BindsModule.class,
+          com.example.cnn_news_app.viewmodel.MainViewModel_HiltModules.BindsModule.class
       }
   )
   @ViewModelScoped

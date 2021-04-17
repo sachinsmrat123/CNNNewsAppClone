@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\Ravi\\Desktop\\New folder\\CNNNewsAppClone\\cnnapp\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Ravi\\.gradle\\caches\\transforms-2\\files-2.1\\f0156202e44b44b303736d3c340fa2d2\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Ravi\\.gradle\\caches\\transforms-2\\files-2.1\\62723554df39504ed9083c86acd619f7\\appcompat-1.2.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Ravi\\.gradle\\caches\\transforms-2\\files-2.1\\08892f747feab3839acb6b522c3fb837\\core-1.3.2\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Ravi\\.gradle\\caches\\transforms-2\\files-2.1\\aeb6fc897181876d5718202c398b6ed4\\core-1.3.2\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

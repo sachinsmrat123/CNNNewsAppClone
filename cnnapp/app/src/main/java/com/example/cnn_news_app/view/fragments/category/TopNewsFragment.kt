@@ -3,7 +3,7 @@ package com.example.cnn_news_app.view.fragments.category
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,7 +21,6 @@ import com.example.cnn_news_app.adapters.NewsAdapter
 import com.example.cnn_news_app.data.model.Article
 import com.example.cnn_news_app.util.NetworkResult
 import com.example.cnn_news_app.Activity.DetailedNews
-import com.example.cnn_news_app.model.Article
 import com.example.cnn_news_app.util.observeOnce
 import com.example.cnn_news_app.viewmodel.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -57,21 +56,21 @@ class TopNewsFragment : Fragment(),ItemClickListener{
         rvTopNews.adapter =mTopNewsAdapter
         rvTopNews.layoutManager = LinearLayoutManager(requireContext())
 
-        requestApiData()
+
 
 
 //        lifecycleScope.launchWhenStarted {
 //            readDatabase()
 //        }
 
-        swipeRefresh= view.findViewById(R.id.swiperefresh_items)
         lifecycleScope.launchWhenStarted {
             readDatabase()
         }
+        swipeRefresh= view.findViewById(R.id.swiperefresh_items)
         swipeRefresh.setOnRefreshListener {
             requestApiData()
         }
-
+        requestApiData()
     }
 
     private fun readDatabase() {
@@ -156,12 +155,13 @@ class TopNewsFragment : Fragment(),ItemClickListener{
 
     override fun onArticleClicked(article: Article) {
         val intent=Intent(context, DetailedNews::class.java)
-        intent.putExtra("title", article.title)
-        intent.putExtra("image", article.urlToImage)
-        intent.putExtra("by", article.author)
-        intent.putExtra("time", article.publishedAt)
-        intent.putExtra("content", article.content)
+        intent.putExtra("newsUrl",article.url)
         startActivity(intent)
+//        intent.putExtra("title", article.title)
+//        intent.putExtra("image", article.urlToImage)
+//        intent.putExtra("by", article.author)
+//        intent.putExtra("time", article.publishedAt)
+//        intent.putExtra("content", article.content)
     }
 
     override fun onSavedButtonClicked(article: Article) {
@@ -176,17 +176,14 @@ class TopNewsFragment : Fragment(),ItemClickListener{
     }
 
     override fun onShareButtonClicked(article: Article) {
-
         val intent = Intent(Intent.ACTION_SEND)
         intent.type = "text/plain"
-//        intent.setPackage("com.whatsapp")
         var body = article.url;
         var sub = "Cnn News";
         intent.putExtra(Intent.EXTRA_SUBJECT,sub);
         intent.putExtra(Intent.EXTRA_TEXT,body);
         startActivity(Intent.createChooser(intent, "Share Using"))
-//        intent.putExtra(Intent.EXTRA_TEXT, article.url)
-//        startActivity(intent)
+
     }
 
 

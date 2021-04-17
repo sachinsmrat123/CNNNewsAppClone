@@ -28,6 +28,15 @@ com/example/cnn_news_app/MainViewModel_HiltModules.java
  com.example.cnn_news_app.MainViewModel_HiltModules
  com.example.cnn_news_app.MainViewModel_HiltModules$BindsModule
  com.example.cnn_news_app.MainViewModel_HiltModules$KeyModule
+com/example/cnn_news_app/viewmodel/MainViewModel_HiltModules.java
+ com.example.cnn_news_app.viewmodel.MainViewModel_HiltModules
+ com.example.cnn_news_app.viewmodel.MainViewModel_HiltModules$BindsModule
+ com.example.cnn_news_app.viewmodel.MainViewModel_HiltModules$KeyModule
+com/example/cnn_news_app/firebaseAuth/SignUpActivity.java
+ com.example.cnn_news_app.firebaseAuth.SignUpActivity
+ com.example.cnn_news_app.firebaseAuth.SignUpActivity$1
+ com.example.cnn_news_app.firebaseAuth.SignUpActivity$2
+ com.example.cnn_news_app.firebaseAuth.SignUpActivity$3
 hilt_aggregated_deps/com_example_cnn_news_app_view_fragments_HomeFragment_GeneratedInjectorModuleDeps.java
  hilt_aggregated_deps.com_example_cnn_news_app_view_fragments_HomeFragment_GeneratedInjectorModuleDeps
 hilt_aggregated_deps/com_example_cnn_news_app_di_DatabaseModuleModuleDeps.java
@@ -49,6 +58,9 @@ com/example/cnn_news_app/BuildConfig.java
  com.example.cnn_news_app.BuildConfig
 com/example/cnn_news_app/MainActivity_GeneratedInjector.java
  com.example.cnn_news_app.MainActivity_GeneratedInjector
+com/example/cnn_news_app/viewmodel/MainViewModel_HiltModules_KeyModule_ProvideFactory.java
+ com.example.cnn_news_app.viewmodel.MainViewModel_HiltModules_KeyModule_ProvideFactory
+ com.example.cnn_news_app.viewmodel.MainViewModel_HiltModules_KeyModule_ProvideFactory$InstanceHolder
 com/example/cnn_news_app/databinding/FragmentWorldBinding.java
  com.example.cnn_news_app.databinding.FragmentWorldBinding
 com/example/cnn_news_app/databinding/ActivitySelectNewsFeedBinding.java
@@ -68,15 +80,20 @@ com/example/cnn_news_app/MainViewModel_HiltModules_KeyModule_ProvideFactory.java
  com.example.cnn_news_app.MainViewModel_HiltModules_KeyModule_ProvideFactory$InstanceHolder
 com/example/cnn_news_app/databinding/ActivitySlaphScreenBinding.java
  com.example.cnn_news_app.databinding.ActivitySlaphScreenBinding
-com/example/cnn_news_app/NewsRepository_Factory.java
- com.example.cnn_news_app.NewsRepository_Factory
 com/example/cnn_news_app/view/fragments/Hilt_HomeFragment.java
  com.example.cnn_news_app.view.fragments.Hilt_HomeFragment
+hilt_aggregated_deps/com_example_cnn_news_app_viewmodel_MainViewModel_HiltModules_KeyModuleModuleDeps.java
+ hilt_aggregated_deps.com_example_cnn_news_app_viewmodel_MainViewModel_HiltModules_KeyModuleModuleDeps
 com/example/cnn_news_app/di/NetworkModule_ProvideConverterFactoryFactory.java
  com.example.cnn_news_app.di.NetworkModule_ProvideConverterFactoryFactory
  com.example.cnn_news_app.di.NetworkModule_ProvideConverterFactoryFactory$InstanceHolder
 com/example/cnn_news_app/databinding/ActivityMainBinding.java
  com.example.cnn_news_app.databinding.ActivityMainBinding
+com/example/cnn_news_app/firebaseAuth/LoginActivity.java
+ com.example.cnn_news_app.firebaseAuth.LoginActivity
+ com.example.cnn_news_app.firebaseAuth.LoginActivity$1
+ com.example.cnn_news_app.firebaseAuth.LoginActivity$2
+ com.example.cnn_news_app.firebaseAuth.LoginActivity$3
 com/example/cnn_news_app/Hilt_MyApplication.java
  com.example.cnn_news_app.Hilt_MyApplication
  com.example.cnn_news_app.Hilt_MyApplication$1
@@ -136,14 +153,36 @@ com/example/cnn_news_app/MyApplication_HiltComponents.java
  com.example.cnn_news_app.MyApplication_HiltComponents$ViewWithFragmentCBuilderModule
 com/example/cnn_news_app/di/DatabaseModule_ProvideDatabaseFactory.java
  com.example.cnn_news_app.di.DatabaseModule_ProvideDatabaseFactory
+com/example/cnn_news_app/databinding/ActivityLiveTvBinding.java
+ com.example.cnn_news_app.databinding.ActivityLiveTvBinding
 com/example/cnn_news_app/di/DatabaseModule_ProvideDaoFactory.java
  com.example.cnn_news_app.di.DatabaseModule_ProvideDaoFactory
 com/example/cnn_news_app/databinding/FragmentHomeBinding.java
  com.example.cnn_news_app.databinding.FragmentHomeBinding
+com/example/cnn_news_app/databinding/SavedNewsItemLayoutBinding.java
+ com.example.cnn_news_app.databinding.SavedNewsItemLayoutBinding
 com/example/cnn_news_app/data/database/ArticleDao_Impl.java
  com.example.cnn_news_app.data.database.ArticleDao_Impl
  com.example.cnn_news_app.data.database.ArticleDao_Impl$1
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$10
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$11
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$12
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$13
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$14
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$15
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$16
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$17
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$18
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$19
  com.example.cnn_news_app.data.database.ArticleDao_Impl$2
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$20
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$21
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$22
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$23
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$24
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$25
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$26
+ com.example.cnn_news_app.data.database.ArticleDao_Impl$27
  com.example.cnn_news_app.data.database.ArticleDao_Impl$3
  com.example.cnn_news_app.data.database.ArticleDao_Impl$4
  com.example.cnn_news_app.data.database.ArticleDao_Impl$5
@@ -151,6 +190,8 @@ com/example/cnn_news_app/data/database/ArticleDao_Impl.java
  com.example.cnn_news_app.data.database.ArticleDao_Impl$7
  com.example.cnn_news_app.data.database.ArticleDao_Impl$8
  com.example.cnn_news_app.data.database.ArticleDao_Impl$9
+com/example/cnn_news_app/databinding/ActivitySignUpBinding.java
+ com.example.cnn_news_app.databinding.ActivitySignUpBinding
 com/example/cnn_news_app/Hilt_MainActivity.java
  com.example.cnn_news_app.Hilt_MainActivity
  com.example.cnn_news_app.Hilt_MainActivity$1
@@ -162,15 +203,27 @@ hilt_aggregated_deps/com_example_cnn_news_app_di_NetworkModuleModuleDeps.java
  hilt_aggregated_deps.com_example_cnn_news_app_di_NetworkModuleModuleDeps
 com/example/cnn_news_app/MyApplication_GeneratedInjector.java
  com.example.cnn_news_app.MyApplication_GeneratedInjector
+com/example/cnn_news_app/repository/NewsRepository_Factory.java
+ com.example.cnn_news_app.repository.NewsRepository_Factory
+com/example/cnn_news_app/databinding/ActivityLoginBinding.java
+ com.example.cnn_news_app.databinding.ActivityLoginBinding
 com/example/cnn_news_app/databinding/FragmentSavedBinding.java
  com.example.cnn_news_app.databinding.FragmentSavedBinding
+com/example/cnn_news_app/databinding/ItemLiveNewsBinding.java
+ com.example.cnn_news_app.databinding.ItemLiveNewsBinding
 com/example/cnn_news_app/view/fragments/Hilt_ProfileFragment.java
  com.example.cnn_news_app.view.fragments.Hilt_ProfileFragment
+com/example/cnn_news_app/databinding/SavedSerchedItemLayoutBinding.java
+ com.example.cnn_news_app.databinding.SavedSerchedItemLayoutBinding
 com/example/cnn_news_app/view/fragments/SavedFragment_GeneratedInjector.java
  com.example.cnn_news_app.view.fragments.SavedFragment_GeneratedInjector
+hilt_aggregated_deps/com_example_cnn_news_app_viewmodel_MainViewModel_HiltModules_BindsModuleModuleDeps.java
+ hilt_aggregated_deps.com_example_cnn_news_app_viewmodel_MainViewModel_HiltModules_BindsModuleModuleDeps
 com/example/cnn_news_app/view/fragments/ProfileFragment_GeneratedInjector.java
  com.example.cnn_news_app.view.fragments.ProfileFragment_GeneratedInjector
 com/example/cnn_news_app/view/fragments/category/Hilt_SportsFragment.java
  com.example.cnn_news_app.view.fragments.category.Hilt_SportsFragment
 com/example/cnn_news_app/MainViewModel_Factory.java
  com.example.cnn_news_app.MainViewModel_Factory
+com/example/cnn_news_app/viewmodel/MainViewModel_Factory.java
+ com.example.cnn_news_app.viewmodel.MainViewModel_Factory

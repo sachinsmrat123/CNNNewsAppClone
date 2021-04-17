@@ -1,24 +1,15 @@
 package com.example.cnn_news_app
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.cnn_news_app.model.Article
-import com.example.cnn_news_app.view.fragments.HomeFragment
-import com.example.cnn_news_app.view.fragments.ProfileFragment
-import com.example.cnn_news_app.view.fragments.SavedFragment
-import com.example.cnn_news_app.view.fragments.SearchFragment
-import com.example.cnn_news_app.view.fragments.category.BusinessFragment
-import com.example.cnn_news_app.view.fragments.category.EntertainmentFragment
-import com.example.cnn_news_app.view.fragments.category.HealthFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_entertainment.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 
@@ -63,9 +54,8 @@ class MainActivity : AppCompatActivity() {
         )
 
         bottomNavigationView.setupWithNavController(navController)
-      setSupportActionBar(toolBar)
-        setSupportActionBar(toolBarDetailed)
-        setupActionBarWithNavController(navController,appBarConfiguration)
+        setSupportActionBar(toolBar)
+        setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
 
@@ -79,4 +69,5 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
+
 }

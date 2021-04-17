@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.cnn_news_app.R
 import com.example.cnn_news_app.data.model.Article
+import com.squareup.picasso.Picasso
 
 class NewsAdapter(private var articles: List<Article>,private val listener: ItemClickListener):RecyclerView.Adapter<NewsAdapter.NewsViewsHolder>() {
 
@@ -24,7 +25,8 @@ class NewsAdapter(private var articles: List<Article>,private val listener: Item
 
     override fun onBindViewHolder(holder: NewsViewsHolder, position: Int) {
         holder.mTvNews.text = articles[position].title
-        Glide.with(holder.mIvNews).load(articles[position].urlToImage).into(holder.mIvNews)
+//        Glide.with(holder.mIvNews).load(articles[position].urlToImage).placeholder(R.drawable.sample_image).into(holder.mIvNews)
+        Picasso.get().load(articles[position].urlToImage).into(holder.mIvNews);
 
         holder.mIvNews.setOnClickListener {
             listener.onArticleClicked(articles[position])
@@ -51,7 +53,6 @@ class NewsAdapter(private var articles: List<Article>,private val listener: Item
         val mIvNews: ImageView = view.findViewById(R.id.ivNews)
         val mBtnShareNews: ImageView = view.findViewById(R.id.btnShareNews)
         val mBtnSaveNews: ImageView = view.findViewById(R.id.btnSaveNews)
-
     }
 
     fun setData(newData: List<Article>){

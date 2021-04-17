@@ -8,7 +8,7 @@
     tools:context=".view.fragments.SearchFragment">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolBarDetailed"
+        android:id="@+id/toolBarhome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,10 +20,10 @@
 
     <TextView
         android:id="@+id/tvSearch"
-        app:layout_constraintTop_toTopOf="@id/toolBarDetailed"
-        app:layout_constraintBottom_toBottomOf="@id/toolBarDetailed"
-        app:layout_constraintEnd_toEndOf="@id/toolBarDetailed"
-        app:layout_constraintStart_toStartOf="@id/toolBarDetailed"
+        app:layout_constraintTop_toTopOf="@id/toolBarhome"
+        app:layout_constraintBottom_toBottomOf="@id/toolBarhome"
+        app:layout_constraintEnd_toEndOf="@id/toolBarhome"
+        app:layout_constraintStart_toStartOf="@id/toolBarhome"
         android:text="Search"
         android:textSize="20sp"
         android:textColor="@color/white"
