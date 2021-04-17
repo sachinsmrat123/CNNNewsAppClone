@@ -20,6 +20,10 @@ import com.example.cnn_news_app.di.NetworkModule_ProvideConverterFactoryFactory;
 import com.example.cnn_news_app.di.NetworkModule_ProvideHttpClientFactory;
 import com.example.cnn_news_app.di.NetworkModule_ProvideRetrofitInstanceFactory;
 import com.example.cnn_news_app.view.fragments.HomeFragment;
+import com.example.cnn_news_app.view.fragments.ProfileFragment;
+import com.example.cnn_news_app.view.fragments.SavedFragment;
+import com.example.cnn_news_app.view.fragments.SearchFragment;
+import com.example.cnn_news_app.view.fragments.category.SportsFragment;
 import com.example.cnn_news_app.view.fragments.category.TopNewsFragment;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.internal.builders.ActivityComponentBuilder;
@@ -334,6 +338,22 @@ public final class DaggerMyApplication_HiltComponents_SingletonC extends MyAppli
 
         @Override
         public void injectHomeFragment(HomeFragment homeFragment) {
+        }
+
+        @Override
+        public void injectProfileFragment(ProfileFragment profileFragment) {
+        }
+
+        @Override
+        public void injectSavedFragment(SavedFragment savedFragment) {
+        }
+
+        @Override
+        public void injectSearchFragment(SearchFragment searchFragment) {
+        }
+
+        @Override
+        public void injectSportsFragment(SportsFragment sportsFragment) {
         }
 
         @Override

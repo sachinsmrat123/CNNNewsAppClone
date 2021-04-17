@@ -3,6 +3,10 @@ package com.example.cnn_news_app;
 import com.example.cnn_news_app.di.DatabaseModule;
 import com.example.cnn_news_app.di.NetworkModule;
 import com.example.cnn_news_app.view.fragments.HomeFragment_GeneratedInjector;
+import com.example.cnn_news_app.view.fragments.ProfileFragment_GeneratedInjector;
+import com.example.cnn_news_app.view.fragments.SavedFragment_GeneratedInjector;
+import com.example.cnn_news_app.view.fragments.SearchFragment_GeneratedInjector;
+import com.example.cnn_news_app.view.fragments.category.SportsFragment_GeneratedInjector;
 import com.example.cnn_news_app.view.fragments.category.TopNewsFragment_GeneratedInjector;
 import dagger.Binds;
 import dagger.Component;
@@ -208,6 +212,10 @@ public final class MyApplication_HiltComponents {
   )
   @FragmentScoped
   public abstract static class FragmentC implements HomeFragment_GeneratedInjector,
+      ProfileFragment_GeneratedInjector,
+      SavedFragment_GeneratedInjector,
+      SearchFragment_GeneratedInjector,
+      SportsFragment_GeneratedInjector,
       TopNewsFragment_GeneratedInjector,
       FragmentComponent,
       DefaultViewModelFactories.FragmentEntryPoint,

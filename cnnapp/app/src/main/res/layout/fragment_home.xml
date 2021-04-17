@@ -9,7 +9,7 @@
 
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolBar"
+        android:id="@+id/toolBarDetailed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +25,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/ic_cnn_logo_white"
-        app:layout_constraintBottom_toBottomOf="@id/toolBar"
+        app:layout_constraintBottom_toBottomOf="@id/toolBarDetailed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,9 +33,9 @@
 
     <TextView
         android:id="@+id/tvWatchTv"
-        app:layout_constraintTop_toTopOf="@id/toolBar"
-        app:layout_constraintBottom_toBottomOf="@id/toolBar"
-        app:layout_constraintEnd_toEndOf="@id/toolBar"
+        app:layout_constraintTop_toTopOf="@id/toolBarDetailed"
+        app:layout_constraintBottom_toBottomOf="@id/toolBarDetailed"
+        app:layout_constraintEnd_toEndOf="@id/toolBarDetailed"
         android:text="Watch TV"
         android:layout_marginEnd="13dp"
         android:textSize="14sp"
@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabTextAppearance="@style/text_appearance_for_tab"
-        app:layout_constraintTop_toBottomOf="@id/toolBar"
+        app:layout_constraintTop_toBottomOf="@id/toolBarDetailed"
         app:tabMode="scrollable" />
 
     <androidx.viewpager.widget.ViewPager

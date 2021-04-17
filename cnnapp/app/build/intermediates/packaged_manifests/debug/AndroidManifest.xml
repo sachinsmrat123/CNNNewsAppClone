@@ -23,6 +23,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.CNN_news_app" >
+        <activity android:name="com.example.cnn_news_app.Activity.DetailedNews" />
         <activity android:name="com.example.cnn_news_app.Activity.AlertsThatMatter" />
         <activity android:name="com.example.cnn_news_app.Activity.SelectNewsFeed" />
         <activity android:name="com.example.cnn_news_app.MainActivity" />

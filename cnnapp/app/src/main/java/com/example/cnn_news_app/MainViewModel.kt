@@ -39,7 +39,6 @@ application: Application
     private suspend fun getNewsSafeCall() {
         topNewsResponse.value = NetworkResult.Loading()
         if (hasInternetConnection()){
-
             try {
                 val response = repository.getTopNews()
                 topNewsResponse.value = handleNewsResponse(response)

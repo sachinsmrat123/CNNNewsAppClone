@@ -28,7 +28,7 @@
                 android:scaleType="center"
                 app:srcCompat="@drawable/sample_image" />
             <ImageView
-                android:id="@+id/ivNewsBackground"
+                android:id="@+id/tvNewsImageDetailed"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
                 app:layout_constraintEnd_toEndOf="@id/ivNews"

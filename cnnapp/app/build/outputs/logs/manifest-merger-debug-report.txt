@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-29:12
 MERGED from [androidx.databinding:viewbinding:4.1.1] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\42287bb0c17b55e9020b90f150c98763\jetified-viewbinding-4.1.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\209e08d1b1471767c1a3ed4ea3f4b204\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment-ktx:1.2.4] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\61eae9cccc8092f0a86849284dc9ede8\jetified-fragment-ktx-1.2.4\AndroidManifest.xml:17:1-24:12
@@ -73,20 +73,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.0] C:\Users\Ravi\.gr
 MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\1370f2e5b129108b8d0d6174567d973f\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\e8778905ca9728bc1412cf313c4e1215\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.33] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\993e5689536406d26b35ff11fe516843\jetified-dagger-lint-aar-2.33\AndroidManifest.xml:16:1-19:12
-INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-29:12
 	package
 		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-29:12
 		INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-27:12
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:1-29:12
 		INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:2:11-69
@@ -95,11 +95,11 @@ ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\
 	android:name
 		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:5:22-76
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:6:5-66
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:6:5-67
 	android:name
 		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:7:5-25:19
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:8:5-27:19
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\4f3672d79c31f1ecb15d2aa0867bc9be\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\4f3672d79c31f1ecb15d2aa0867bc9be\material-1.3.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\17f251dc40e8c5e51a92107b78795fe9\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -121,45 +121,49 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.2.0-alpha01] C:\Users\Ravi\.
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.2] C:\Users\Ravi\.gradle\caches\transforms-2\files-2.1\08892f747feab3839acb6b522c3fb837\core-1.3.2\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:12:9-41
 	android:roundIcon
-		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:12:9-54
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:13:9-54
 	android:icon
-		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:14:9-50
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:15:9-50
 	android:name
 		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:9:9-38
+activity#com.example.cnn_news_app.Activity.DetailedNews
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:16:9-68
+	android:name
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:16:19-56
 activity#com.example.cnn_news_app.Activity.AlertsThatMatter
-ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:15:9-62
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:17:9-63
 	android:name
-		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:15:19-60
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:17:19-60
 activity#com.example.cnn_news_app.Activity.SelectNewsFeed
-ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:16:9-60
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:18:9-61
 	android:name
-		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:16:19-58
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:18:19-58
 activity#com.example.cnn_news_app.MainActivity
-ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:17:9-49
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:19:9-50
 	android:name
-		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:17:19-47
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:19:19-47
 activity#com.example.cnn_news_app.Activity.SlaphScreen
-ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:18:9-24:20
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:20:9-26:20
 	android:name
-		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:18:19-55
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:20:19-55
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:19:13-23:29
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:20:17-69
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:20:25-66
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml:24:27-74
 uses-sdk
 INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Ravi\Desktop\New folder\CNNNewsAppClone\cnnapp\app\src\main\AndroidManifest.xml

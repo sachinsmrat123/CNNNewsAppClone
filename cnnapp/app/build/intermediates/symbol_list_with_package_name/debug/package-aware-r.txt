@@ -1690,7 +1690,10 @@ drawable design_snackbar_background
 drawable globe
 drawable gray_background_round
 drawable gray_line
+drawable ic_baseline_arrow_back_ios_24
 drawable ic_baseline_person_pin_24
+drawable ic_baseline_share_24
+drawable ic_bookmark
 drawable ic_clock_black_24dp
 drawable ic_cnn_logo_white
 drawable ic_home_filled
@@ -1961,7 +1964,6 @@ id italic
 id item_touch_helper_previous_elevation
 id ivCnnLogo
 id ivNews
-id ivNewsBackground
 id jumpToEnd
 id jumpToStart
 id labelGroup
@@ -2079,6 +2081,7 @@ id row_index_key
 id rvBusiness
 id rvEntertainment
 id rvHealth
+id rvSaved
 id rvSports
 id rvTopNews
 id rvUsPolitics
@@ -2142,6 +2145,7 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id swiperefresh_items
 id tabLayout
 id tabMode
 id tag_accessibility_actions
@@ -2183,7 +2187,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
-id toolBar
+id toolBarDetailed
 id top
 id topNewsProgressBar
 id topPanel
@@ -2196,12 +2200,17 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tvContentDetailed
 id tvInternational
 id tvNews
 id tvNewsFooter
+id tvNewsImageDetailed
 id tvPreferences
+id tvPublisherDetailed
 id tvSavedStories
 id tvSearch
+id tvTitleDetailed
+id tvUpdateTime
 id tvUsEdition
 id tvWatchTv
 id unchecked
@@ -2211,6 +2220,7 @@ id up
 id useLogo
 id view
 id view2
+id view3
 id viewPager
 id view_offset_helper
 id view_tree_lifecycle_owner
@@ -2220,6 +2230,7 @@ id visible
 id visible_removing_fragment_view_tag
 id withText
 id withinBounds
+id worldProgressBar
 id wrap
 id wrap_content
 id zero_corner_chip
@@ -2285,6 +2296,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_alerts_that_matter
+layout activity_detailed_news
 layout activity_main
 layout activity_select_news_feed
 layout activity_slaph_screen
