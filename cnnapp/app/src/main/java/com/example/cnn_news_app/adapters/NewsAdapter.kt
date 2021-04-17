@@ -25,8 +25,8 @@ class NewsAdapter(private var articles: List<Article>,private val listener: Item
 
     override fun onBindViewHolder(holder: NewsViewsHolder, position: Int) {
         holder.mTvNews.text = articles[position].title
-//        Glide.with(holder.mIvNews).load(articles[position].urlToImage).placeholder(R.drawable.sample_image).into(holder.mIvNews)
-        Picasso.get().load(articles[position].urlToImage).into(holder.mIvNews);
+        Glide.with(holder.mIvNews).load(articles[position].urlToImage).placeholder(R.drawable.cnnlogodeafult).into(holder.mIvNews)
+
 
         holder.mIvNews.setOnClickListener {
             listener.onArticleClicked(articles[position])
