@@ -3,18 +3,22 @@
     package="com.example.cnn_news_app">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
-        android:allowBackup="true"
         android:name=".MyApplication"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CNN_news_app">
-        <activity android:name=".Activity.AlertsThatMatter"/>
-        <activity android:name=".Activity.SelectNewsFeed"/>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".firebaseAuth.SignUpActivity"></activity>
+        <activity android:name=".firebaseAuth.LoginActivity" />
+        <activity android:name=".liveTv.activity.liveTvActivity" />
+        <activity android:name=".Activity.AlertsThatMatter" />
+        <activity android:name=".Activity.SelectNewsFeed" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".Activity.SlaphScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

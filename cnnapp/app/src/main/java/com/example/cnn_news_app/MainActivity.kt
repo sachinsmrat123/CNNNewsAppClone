@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         )
 
         bottomNavigationView.setupWithNavController(navController)
-        setSupportActionBar(toolBar)
+      setSupportActionBar(toolBar)
         setupActionBarWithNavController(navController,appBarConfiguration)
     }
 
