@@ -50,8 +50,21 @@ class SearchFragment : Fragment(),SavedSearchedItemClickListener {
 
 
         mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
-        mainViewModel.getAllSavedSearched().observe(viewLifecycleOwner, Observer {
-            mSaved.setData(it)
+        mainViewModel.getAllSavedSearched().observe(viewLifecycleOwner, Observer {data->
+
+            if (data.isNotEmpty()){
+                mSaved.setData(data)
+                tvClear.visibility = View.VISIBLE
+                ivNoRecentSearch.visibility = View.INVISIBLE
+                tvNoRecentSearch.visibility = View.INVISIBLE
+                rvSearchedSaved.visibility = View.VISIBLE
+            }else{
+                tvClear.visibility = View.INVISIBLE
+                ivNoRecentSearch.visibility = View.VISIBLE
+                tvNoRecentSearch.visibility = View.VISIBLE
+                rvSearchedSaved.visibility = View.INVISIBLE
+            }
+
         })
 
 
@@ -78,7 +91,8 @@ class SearchFragment : Fragment(),SavedSearchedItemClickListener {
 
         tvClear.setOnClickListener {
             mainViewModel.clearAllSearched()
-            tvClear.visibility = View.INVISIBLE
+            rvSearchedSaved.visibility = View.INVISIBLE
+
         }
 
         tvCancle.setOnClickListener {

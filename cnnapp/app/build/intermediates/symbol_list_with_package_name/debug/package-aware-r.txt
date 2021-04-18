@@ -2096,6 +2096,7 @@ id ivImage
 id ivNews
 id ivNewsBackground
 id ivNewsList
+id ivNoRecentSearch
 id ivNoSavedArticle
 id ivNoSearchResult
 id ivPlayButton
@@ -2368,6 +2369,7 @@ id tvInternational
 id tvLogin
 id tvNews
 id tvNewsFooter
+id tvNoRecentSearch
 id tvNoResultDesc
 id tvNoSearchResult
 id tvPreferences
