@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
+import com.example.cnn_news_app.Activity.DetailedNews;
+import com.example.cnn_news_app.Activity.SearchedDetailsActivity;
 import com.example.cnn_news_app.data.database.ArticleDao;
 import com.example.cnn_news_app.data.database.NewsDatabase;
 import com.example.cnn_news_app.data.network.NewsApi;
@@ -287,6 +289,14 @@ public final class DaggerMyApplication_HiltComponents_SingletonC extends MyAppli
     private final class ActivityCImpl extends MyApplication_HiltComponents.ActivityC {
       private ActivityCImpl(Activity activity) {
 
+      }
+
+      @Override
+      public void injectDetailedNews(DetailedNews detailedNews) {
+      }
+
+      @Override
+      public void injectSearchedDetailsActivity(SearchedDetailsActivity searchedDetailsActivity) {
       }
 
       @Override

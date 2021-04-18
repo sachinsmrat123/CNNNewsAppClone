@@ -24,12 +24,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.CNN_news_app" >
         <activity android:name="com.example.cnn_news_app.Activity.DetailedNews" />
-        <activity android:name="com.example.cnn_news_app.Activity.AlertsThatMatter" />
-        <activity android:name="com.example.cnn_news_app.Activity.SelectNewsFeed" />
-        <activity android:name="com.example.cnn_news_app.MainActivity" />
         <activity android:name="com.example.cnn_news_app.firebaseAuth.SignUpActivity" />
         <activity android:name="com.example.cnn_news_app.firebaseAuth.LoginActivity" />
         <activity android:name="com.example.cnn_news_app.liveTv.activity.liveTvActivity" />
+        <activity android:name="com.example.cnn_news_app.Activity.SearchedDetailsActivity" />
         <activity android:name="com.example.cnn_news_app.Activity.AlertsThatMatter" />
         <activity android:name="com.example.cnn_news_app.Activity.SelectNewsFeed" />
         <activity android:name="com.example.cnn_news_app.MainActivity" />

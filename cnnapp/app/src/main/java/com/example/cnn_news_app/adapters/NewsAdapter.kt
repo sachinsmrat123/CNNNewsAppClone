@@ -1,5 +1,6 @@
 package com.example.cnn_news_app.adapters
 
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +12,7 @@ import com.example.cnn_news_app.R
 import com.example.cnn_news_app.data.model.Article
 import com.squareup.picasso.Picasso
 
-class NewsAdapter(private var articles: List<Article>,private val listener: ItemCliclickListeners):RecyclerView.Adapter<NewsAdapter.NewsViewsHolder>() {
+class NewsAdapter(private var articles: List<Article>,private val listener: ItemClickListener):RecyclerView.Adapter<NewsAdapter.NewsViewsHolder>() {
 
 //    private var articles = emptyList<Article>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewsHolder {
@@ -25,7 +26,8 @@ class NewsAdapter(private var articles: List<Article>,private val listener: Item
 
     override fun onBindViewHolder(holder: NewsViewsHolder, position: Int) {
         holder.mTvNews.text = articles[position].title
-        Glide.with(holder.mIvNews).load(articles[position].urlToImage).placeholder(R.drawable.cnnlogodeafult).into(holder.mIvNews)
+        Glide.with(holder.mIvNews).load(articles[position].urlToImage).placeholder(R.drawable.ic_cnn_logo_red).into(holder.mIvNews)
+
 
 
         holder.mIvNews.setOnClickListener {

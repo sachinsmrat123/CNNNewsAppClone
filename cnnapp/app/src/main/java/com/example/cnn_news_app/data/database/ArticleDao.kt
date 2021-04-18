@@ -29,6 +29,9 @@ interface ArticleDao {
     @Query("SELECT * FROM SearchedArticlesSaved ORDER BY id ASC")
     fun getAllSavedSearched():LiveData<List<SearchedArticleEntity>>
 
+    @Query("DELETE FROM SearchedArticlesSaved")
+    suspend fun clearAllSearched()
+
     /** FOR CACHE */
 
 

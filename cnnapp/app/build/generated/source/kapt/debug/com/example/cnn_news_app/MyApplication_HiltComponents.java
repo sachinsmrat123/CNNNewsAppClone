@@ -1,5 +1,7 @@
 package com.example.cnn_news_app;
 
+import com.example.cnn_news_app.Activity.DetailedNews_GeneratedInjector;
+import com.example.cnn_news_app.Activity.SearchedDetailsActivity_GeneratedInjector;
 import com.example.cnn_news_app.di.DatabaseModule;
 import com.example.cnn_news_app.di.NetworkModule;
 import com.example.cnn_news_app.view.fragments.HomeFragment_GeneratedInjector;
@@ -172,7 +174,9 @@ public final class MyApplication_HiltComponents {
       }
   )
   @ActivityScoped
-  public abstract static class ActivityC implements MainActivity_GeneratedInjector,
+  public abstract static class ActivityC implements DetailedNews_GeneratedInjector,
+      SearchedDetailsActivity_GeneratedInjector,
+      MainActivity_GeneratedInjector,
       ActivityComponent,
       DefaultViewModelFactories.ActivityEntryPoint,
       HiltWrapper_HiltViewModelFactory_ActivityCreatorEntryPoint,

@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.Toolbar>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvSearch"
@@ -145,10 +145,48 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="15dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/llSearchDetails" />
 
+<ImageView
+    android:id="@+id/ivNoSearchResult"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:visibility="invisible"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/llSearchDetails"
+    android:src="@drawable/ic_paper"
+    android:layout_marginTop="30dp"
+    />
+    <TextView
+        android:id="@+id/tvNoSearchResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/ivNoSearchResult"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="No Search Result Found"
+        android:textSize="18sp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
 
+        />
+
+    <TextView
+        android:id="@+id/tvNoResultDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@id/tvNoSearchResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:textColor="#696969"
+        android:text="Please revise your search and try again"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

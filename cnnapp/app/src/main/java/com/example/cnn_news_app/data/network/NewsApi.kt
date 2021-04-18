@@ -11,21 +11,24 @@ import retrofit2.http.Query
 interface NewsApi {
 
 
+
     //https://newsapi.org/v2/everything?country=us&apiKey=48594a7cff5341469f3f0faedcbf115b
     @GET("/v2/everything")
     suspend fun searchNews(
             @Query("q")
             searchQuery: String,
             @Query("apiKey")
-            apiKey: String = "176d14d6430e4274900eef544f0ef984"
+            apiKey: String = API_KEY
     ): Response<NewsResponse>
 
 //    https://newsapi.org/v2/top-headlines?country=us&apiKey=48594a7cff5341469f3f0faedcbf115b
 
+    //https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=8fe26304022844b5992650974c36fb69
+
     @GET("/v2/top-headlines")
     suspend fun getTopNews(
-            @Query("country")
-            countryCode: String = "us",
+            @Query("sources")
+            countryCode: String = "cnn",
             @Query("apiKey")
             apiKey: String = API_KEY
     ): Response<NewsResponse>
