@@ -341,6 +341,13 @@ class MainViewModel @Inject constructor(
         return repository.getAllSavedSearched()
     }
 
+    fun clearAllSearched(){
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.clearAllSearched()
+        }
+
+    }
+
     /** Handle Internet connection */
     private fun handleNewsResponse(response: Response<NewsResponse>): NetworkResult<NewsResponse>? {
 

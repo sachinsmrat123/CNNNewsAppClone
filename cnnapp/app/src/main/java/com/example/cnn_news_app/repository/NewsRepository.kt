@@ -71,6 +71,9 @@ class NewsRepository @Inject constructor(
     fun getAllSavedSearched():LiveData<List<SearchedArticleEntity>>{
         return articleDao.getAllSavedSearched()
     }
+    suspend fun clearAllSearched(){
+        return articleDao.clearAllSearched()
+    }
 
     /** CACHE */
 

@@ -17,7 +17,7 @@ public abstract interface NewsApi {
     @org.jetbrains.annotations.Nullable()
     @retrofit2.http.GET(value = "/v2/top-headlines")
     public abstract java.lang.Object getTopNews(@org.jetbrains.annotations.NotNull()
-    @retrofit2.http.Query(value = "country")
+    @retrofit2.http.Query(value = "sources")
     java.lang.String countryCode, @org.jetbrains.annotations.NotNull()
     @retrofit2.http.Query(value = "apiKey")
     java.lang.String apiKey, @org.jetbrains.annotations.NotNull()

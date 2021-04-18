@@ -156,12 +156,13 @@ class TopNewsFragment : Fragment(),ItemClickListener{
     override fun onArticleClicked(article: Article) {
         val intent=Intent(context, DetailedNews::class.java)
         intent.putExtra("newsUrl",article.url)
+        intent.putExtra("title", article.title)
+        intent.putExtra("image", article.urlToImage)
+        intent.putExtra("by", article.author)
+        intent.putExtra("time", article.publishedAt)
+        intent.putExtra("content", article.content)
+        intent.putExtra("author",article.author)
         startActivity(intent)
-//        intent.putExtra("title", article.title)
-//        intent.putExtra("image", article.urlToImage)
-//        intent.putExtra("by", article.author)
-//        intent.putExtra("time", article.publishedAt)
-//        intent.putExtra("content", article.content)
     }
 
     override fun onSavedButtonClicked(article: Article) {

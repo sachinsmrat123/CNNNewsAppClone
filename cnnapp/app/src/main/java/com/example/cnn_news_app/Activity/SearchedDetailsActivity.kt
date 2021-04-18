@@ -54,7 +54,8 @@ class SearchedDetailsActivity : AppCompatActivity(),SearchedNewsDetailsItemClick
 
             override fun onQueryTextSubmit(s: String): Boolean {
                 if (s.isNotEmpty()){
-                    val searchedArticleEntity = SearchedArticleEntity(s)
+                    var searchedArticleEntity = SearchedArticleEntity(s)
+                    mainViewModel.insertSearchedNews(searchedArticleEntity)
                     mainViewModel.getSearchNews(s)
                 }
                 return true
@@ -68,13 +69,23 @@ class SearchedDetailsActivity : AppCompatActivity(),SearchedNewsDetailsItemClick
             when (it) {
                 is NetworkResult.Success<*> -> {
                     hideProgressBar()
+                    rvSearchDetails.visibility = View.VISIBLE
+                    ivNoSearchResult.visibility = View.INVISIBLE
+                    tvNoSearchResult.visibility = View.INVISIBLE
+                    tvNoResultDesc.visibility = View.INVISIBLE
+
                     articles = it.data!!.articles
                     mSearchAdapter.setData(it.data?.articles!!)
-                    tvTotalResults.text = it.data.totalResults.toString()
+                    tvTotalResults.text = "${it.data.totalResults.toString()} results"
+
 
                 }
                 is NetworkResult.Error<*> -> {
                     hideProgressBar()
+                    rvSearchDetails.visibility = View.INVISIBLE
+                    ivNoSearchResult.visibility = View.VISIBLE
+                    tvNoSearchResult.visibility = View.VISIBLE
+                    tvNoResultDesc.visibility = View.VISIBLE
                     Toast.makeText(
                         this,
                         it.message.toString(),
@@ -108,6 +119,9 @@ class SearchedDetailsActivity : AppCompatActivity(),SearchedNewsDetailsItemClick
     }
 
     override fun onSearchedItemClicked(article: Article) {
+        val intent= Intent(this@SearchedDetailsActivity, DetailedNews::class.java)
+        intent.putExtra("newsUrl",article.url)
+        startActivity(intent)
 
     }
 }
