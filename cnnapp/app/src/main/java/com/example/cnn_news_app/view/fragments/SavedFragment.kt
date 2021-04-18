@@ -49,11 +49,25 @@ class SavedFragment : Fragment(), SavedItemClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mainViewModel.getAllSavedArticles().observe(viewLifecycleOwner, Observer {
+        mainViewModel.getAllSavedArticles().observe(viewLifecycleOwner, Observer {data->
 
             rvSaved.layoutManager = LinearLayoutManager(requireContext())
             rvSaved.adapter = mSavedNewsAdapter
-            mSavedNewsAdapter.setData(it)
+
+            if (data.isNotEmpty()) {
+                rvSaved.visibility = View.VISIBLE
+                btnDeleteAll.visibility = View.VISIBLE
+                ivNoSavedArticle.visibility = View.INVISIBLE
+                bgImage.visibility = View.INVISIBLE
+                mSavedNewsAdapter.setData(data)
+            } else {
+                rvSaved.visibility = View.INVISIBLE
+                btnDeleteAll.visibility = View.INVISIBLE
+                ivNoSavedArticle.visibility = View.VISIBLE
+                bgImage.visibility = View.VISIBLE
+            }
+
+
         })
 
         btnDeleteAll.setOnClickListener {
