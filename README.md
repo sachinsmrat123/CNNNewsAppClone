@@ -1,35 +1,46 @@
-# CNNNewsAppClone
-this is clone of CNN news App  
+<h1 align="center">CNN App-Clone</h1>
+
+<p align="center">
+  <a href="https://android-arsenal.com/api?level=21"><img alt="API" src="https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat"/></a>
+</p>
+
+<p align="center">  
+This is an android demo project based on modern Android application tech-stacks and MVVM architecture. The app simulates the working of the News app, CNN. The app show category wise news and also provide search based news. You can also Save news Articles for future refrence , and also share and like the articles.
+</p>
 
 
-     //youtube
-     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
-    
-     //dager-hilt-dependency-injection
-    implementation "com.google.dagger:hilt-android:$hilt_version"
-    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+  ## App Screenshots
 
-    // ViewModel and LiveData
-    implementation "androidx.lifecycle:lifecycle-extensions:$arch_version"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$arch_version"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$arch_version"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$arch_version"
-   
-   
-   //Coroutines
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutineVersion"
-   
-   //Room
-    implementation "androidx.room:room-ktx:$jetpack_version"
-    kapt "androidx.room:room-compiler:$jetpack_version"
-    kapt "com.android.databinding:compiler:$jetpack_version"
-    
-    // Retrofit & OkHttp
-    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
-    
-     // Glide
-    implementation 'com.github.bumptech.glide:glide:4.12.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+<table>
+  <tr>
+    <td><img src="" width="200"/></td>
+    <td><img src="" width="200"/></td>
+    <td><img src="" width="200"/></td>
+    <td><img src="" width="200"/></td>
+  </tr>
+  
+  <tr>
+    <td><img src="" width="200"/></td>
+    <td><img src="" width="200"/></td>
+    <td><img src="" width="200"/></td>
+    <td><img src="" width="200"/></td>
+  </tr>
+ 
+ </table>
+
+## Libraries & Tech Used
+- Minimum SDK level 21
+- [Kotlin](https://kotlinlang.org/) based, [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) for asynchronous handling.
+- [Hilt](https://dagger.dev/hilt/) for dependency injection.
+- JetPack
+  - LiveData - notify domain layer data to views.
+  - Lifecycle - observing data when lifecycle state changes.
+  - ViewModel - lifecycle aware UI related data holder.
+  - [Room Database](https://developer.android.com/training/data-storage/room) - for local storage
+- Architecture
+  - MVVM Architecture (View - ViewModel) 
+- [Firebase](https://firebase.google.com/) - for user authentication and realtime database. 
+- [Glide](https://github.com/bumptech/glide) - loading images.
+- [Navigation Component](https://developer.android.com/jetpack/androidx/releases/navigation) for bottom-bar navigation.
+- [Youtube Player](https://developers.google.com/youtube/android/player) for playing trailers
     
